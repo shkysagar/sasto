@@ -1,18 +1,17 @@
 # Copyright (C) 2015 the WordPress team
 # This file is distributed under the GNU General Public License v2 or later.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: creta 1.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.magikcommerce.com/creta\n"
-"POT-Creation-Date: 2018-08-10 11:04+0530\n"
+"POT-Creation-Date: 2016-04-11 15:11:26+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: Poedit 2.0.6\n"
+
 
 #: 404.php:53
 msgid "404"
@@ -31,25 +30,25 @@ msgid "Back To Home"
 msgstr ""
 
 #: archive.php:97 archive.php:104 category.php:97 category.php:104
-#: includes/mgk_widget.php:151 index.php:108 index.php:115 search.php:100
-#: search.php:107 single.php:92 single.php:99 skins/default/functions.php:1388
-#: tag.php:97 tag.php:104
+#: index.php:97 index.php:104 search.php:100 search.php:107 single.php:92
+#: single.php:99 tag.php:97 tag.php:104 includes/mgk_widget.php:151
+#: skins/default/functions.php:1332
 msgid "By"
 msgstr ""
 
-#: archive.php:196 category.php:196 index.php:207 search.php:199 tag.php:196
+#: archive.php:196 category.php:196 index.php:196 search.php:199 tag.php:196
 msgid "Pages:&nbsp;"
 msgstr ""
 
-#: archive.php:196 category.php:196 index.php:207 search.php:199 tag.php:196
+#: archive.php:196 category.php:196 index.php:196 search.php:199 tag.php:196
 msgid "Next &raquo;"
 msgstr ""
 
-#: archive.php:199 category.php:199 index.php:210 search.php:202 tag.php:199
+#: archive.php:199 category.php:199 index.php:199 search.php:202 tag.php:199
 msgid "Read More"
 msgstr ""
 
-#: archive.php:225 category.php:225 index.php:236 search.php:228 tag.php:225
+#: archive.php:225 category.php:225 index.php:225 search.php:228 tag.php:225
 msgid "Sorry, What you are looking isn't here."
 msgstr ""
 
@@ -70,6 +69,14 @@ msgstr ""
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
+#: comments.php:16
+#, php-format
+msgctxt "comments title"
+msgid "Comment (1)"
+msgid_plural "Comments (%1$s)"
+msgstr[0] ""
+msgstr[1] ""
+
 #: comments.php:44
 msgid "Comments are closed."
 msgstr ""
@@ -84,213 +91,236 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-link.php:27 content-page.php:16 content.php:27 functions.php:741
-#: functions.php:926 image.php:73 woocommerce/global/breadcrumb.php:216
+#: content-link.php:27 content-page.php:16 content.php:27 functions.php:729
+#: functions.php:914 image.php:73 woocommerce/global/breadcrumb.php:216
 msgid "Page"
 msgstr ""
 
-#: content-link.php:43 content-page.php:23 content.php:43 functions.php:1176
+#: content-link.php:43 content-page.php:23 content.php:43 functions.php:1214
 #: image.php:82
 msgid "Edit"
 msgstr ""
 
-#: core/mgk_framework.php:158
-msgid "Follow Us"
-msgstr ""
-
-#: core/resize.php:43
-msgid "No image URL has been entered."
-msgstr ""
-
-#: core/resize.php:82
-msgid "Image is BMP. Please use either JPG or PNG."
-msgstr ""
-
-#: core/social_share.php:12
-msgid "Product Banner"
-msgstr ""
-
-#: functions.php:128
+#: functions.php:121
 msgid "Top menu"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:122
 msgid "Main menu"
 msgstr ""
 
-#: functions.php:335
+#: functions.php:136
+msgctxt "Herr: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:140 functions.php:155
+msgctxt "Open Sans: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:144
+msgctxt "Montserrat: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:148
+msgctxt "Electrolize: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:158
+msgctxt "Raleway: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:323
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:337
+#: functions.php:325
 msgid "Sidebar that appears on the right of Blog and Search page."
 msgstr ""
 
-#: functions.php:344
+#: functions.php:332
 msgid "Shop Sidebar"
 msgstr ""
 
-#: functions.php:346
+#: functions.php:334
 msgid "Main sidebar that appears on the left."
 msgstr ""
 
-#: functions.php:353
+#: functions.php:341
 msgid "Content Sidebar Left"
 msgstr ""
 
-#: functions.php:355
+#: functions.php:343
 msgid "Additional sidebar that appears on the left."
 msgstr ""
 
-#: functions.php:362
+#: functions.php:350
 msgid "Content Sidebar Right"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:352
 msgid "Additional sidebar that appears on the right."
 msgstr ""
 
-#: functions.php:372
+#: functions.php:360
 msgid "Footer Widget Area 1"
 msgstr ""
 
-#: functions.php:374 functions.php:383 functions.php:392 functions.php:401
-#: functions.php:410
+#: functions.php:362 functions.php:371 functions.php:380 functions.php:389
+#: functions.php:398
 msgid "Appears in the footer section of the site."
 msgstr ""
 
-#: functions.php:381
+#: functions.php:369
 msgid "Footer Widget Area 2"
 msgstr ""
 
-#: functions.php:390
+#: functions.php:378
 msgid "Footer Widget Area 3"
 msgstr ""
 
-#: functions.php:399
+#: functions.php:387
 msgid "Footer Widget Area 4"
 msgstr ""
 
-#: functions.php:408
+#: functions.php:396
 msgid "Footer Widget Area 5"
 msgstr ""
 
-#: functions.php:447
+#: functions.php:435
 msgid "Page Layout"
 msgstr ""
 
-#: functions.php:528
+#: functions.php:516
 msgid "Show breadcrumb"
 msgstr ""
 
-#: functions.php:531
+#: functions.php:519
 msgid "Yes"
 msgstr ""
 
-#: functions.php:534
+#: functions.php:522
 msgid "No"
 msgstr ""
 
-#: functions.php:563
+#: functions.php:551
 msgid "Post Layout"
 msgstr ""
 
-#: functions.php:663 functions.php:759
+#: functions.php:651 functions.php:747
 msgid "Home"
 msgstr ""
 
-#: functions.php:683
+#: functions.php:671
 #, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: functions.php:687
+#: functions.php:675
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: functions.php:691
+#: functions.php:675
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: functions.php:679
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: functions.php:694
+#: functions.php:679
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: functions.php:682
 #, php-format
 msgid "Archives: %s"
 msgstr ""
 
-#: functions.php:703 functions.php:862 woocommerce/global/breadcrumb.php:156
+#: functions.php:691 functions.php:850 woocommerce/global/breadcrumb.php:156
 msgid "Error 404"
 msgstr ""
 
-#: functions.php:719 functions.php:900 woocommerce/global/breadcrumb.php:100
+#: functions.php:707 functions.php:888 woocommerce/global/breadcrumb.php:100
 #: woocommerce/global/breadcrumb.php:202
 msgid "Search results for &ldquo;"
 msgstr ""
 
-#: functions.php:723 functions.php:908 woocommerce/global/breadcrumb.php:206
+#: functions.php:711 functions.php:896 woocommerce/global/breadcrumb.php:206
 msgid "Posts tagged &ldquo;"
 msgstr ""
 
-#: functions.php:728 functions.php:913 woocommerce/global/breadcrumb.php:211
+#: functions.php:716 functions.php:901 woocommerce/global/breadcrumb.php:211
 msgid "Author:"
 msgstr ""
 
-#: functions.php:965 woo_function.php:437
+#: functions.php:953 woo_function.php:427
 msgid "My Cart"
 msgstr ""
 
-#: functions.php:975 woo_function.php:447
+#: functions.php:963 woo_function.php:438
 msgid "items"
 msgstr ""
 
-#: functions.php:1007 functions.php:1010 woo_function.php:479
-#: woo_function.php:482
+#: functions.php:994 functions.php:997 woo_function.php:470
+#: woo_function.php:473
 msgid "Edit item"
 msgstr ""
 
-#: functions.php:1012 woo_function.php:484
+#: functions.php:999 woo_function.php:475
 msgid "Remove This Item"
 msgstr ""
 
-#: functions.php:1013 includes/mgk_menu.php:502 woo_function.php:485
+#: functions.php:1000 woo_function.php:476 includes/mgk_menu.php:502
 msgid "Remove"
 msgstr ""
 
-#: functions.php:1031 functions.php:1033 woo_function.php:503
-#: woo_function.php:505
+#: functions.php:1018 functions.php:1020 woo_function.php:494
+#: woo_function.php:496
 msgid "Checkout"
 msgstr ""
 
-#: functions.php:1039 woo_function.php:511
+#: functions.php:1026 woo_function.php:502
 msgid "View Cart"
 msgstr ""
 
-#: functions.php:1046 woo_function.php:518
+#: functions.php:1033 woo_function.php:509
 msgid "Sorry, nothing in cart."
 msgstr ""
 
-#: functions.php:1131
+#: functions.php:1055
+msgid "Follow Us"
+msgstr ""
+
+#: functions.php:1169
 msgid "Select options"
 msgstr ""
 
-#: functions.php:1141 functions.php:1143 skins/default/functions.php:1399
+#: functions.php:1179 functions.php:1181 skins/default/functions.php:1343
 msgid "Read more"
 msgstr ""
 
-#: functions.php:1153 functions.php:1156
+#: functions.php:1191 functions.php:1194
 msgid "Out of stock"
 msgstr ""
 
-#: functions.php:1177
+#: functions.php:1215
 msgid "Reply"
 msgstr ""
 
-#: functions.php:1182
+#: functions.php:1220
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:1187
+#: functions.php:1225
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -311,19 +341,109 @@ msgstr ""
 msgid "Previous page"
 msgstr ""
 
+#: search.php:47
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:247
+msgctxt "Previous post link"
+msgid "<span class=\"fa fa-arrow-left\"></span> &nbsp; Prev POST"
+msgstr ""
+
+#: single.php:253
+msgctxt "Next post link"
+msgid "Next Post &nbsp; <span class=\"fa fa-arrow-right\"></span>"
+msgstr ""
+
+#: woo_function.php:53
+msgid "Related"
+msgstr ""
+
+#: woo_function.php:54 woo_function.php:144 skins/default/functions.php:480
+#: skins/default/functions.php:549 skins/default/functions.php:689
+msgid "Products"
+msgstr ""
+
+#: woo_function.php:62 woo_function.php:152 skins/default/functions.php:488
+#: skins/default/functions.php:557
+msgid "VIEW ALL "
+msgstr ""
+
+#: woo_function.php:73
+msgid "Related Products"
+msgstr ""
+
+#: woo_function.php:96 woo_function.php:191 skins/default/functions.php:509
+#: skins/default/functions.php:583 skins/default/functions.php:651
+#: skins/default/functions.php:762 skins/default/functions.php:835
+msgid "No products found"
+msgstr ""
+
+#: woo_function.php:143
+msgid "Upsell"
+msgstr ""
+
+#: woo_function.php:164
+msgid "Upsell Products"
+msgstr ""
+
+#: woo_function.php:262
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: woo_function.php:276
+msgid "List"
+msgstr ""
+
+#: woo_function.php:291 skins/default/functions.php:899
+#: skins/default/functions.php:997 skins/default/functions.php:1092
+#: skins/default/functions.php:1207 woocommerce/content-product.php:110
+#: woocommerce/content-product.php:233
+msgid "Add to Compare"
+msgstr ""
+
+#: woo_function.php:320 woocommerce/content-product.php:98
+#: woocommerce/content-product.php:222
+msgid "Add to WishList"
+msgstr ""
+
+#: woo_function.php:331
+msgid "Proceed to Checkout"
+msgstr ""
+
+#: woo_function.php:354
+msgctxt "breadcrumb"
+msgid "Home"
+msgstr ""
+
+#: core/resize.php:43
+msgid "No image URL has been entered."
+msgstr ""
+
+#: core/resize.php:82
+msgid "Image is BMP. Please use either JPG or PNG."
+msgstr ""
+
+#: core/social_share.php:12
+msgid "Product Banner"
+msgstr ""
+
 #: includes/layout.php:18 includes/layout.php:89 includes/layout.php:162
 #: includes/layout.php:239
 msgid "Logout"
 msgstr ""
 
 #: includes/layout.php:33 includes/layout.php:104 includes/layout.php:183
-#: includes/layout.php:254 woocommerce/myaccount/form-login.php:32
+#: includes/layout.php:254 woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:56
 msgid "Login"
 msgstr ""
 
 #: includes/layout.php:35 includes/layout.php:106 includes/layout.php:181
-#: includes/layout.php:256 woocommerce/myaccount/form-login.php:71
-#: woocommerce/myaccount/form-login.php:104
+#: includes/layout.php:256 woocommerce/myaccount/form-login.php:75
+#: woocommerce/myaccount/form-login.php:108
 msgid "Register"
 msgstr ""
 
@@ -703,15 +823,15 @@ msgstr ""
 msgid "Unlimited slide uploads with drag and drop sortings."
 msgstr ""
 
-#: includes/reduxConfig.php:304 includes/reduxConfig.php:760
+#: includes/reduxConfig.php:304 includes/reduxConfig.php:737
 msgid "This is a title"
 msgstr ""
 
-#: includes/reduxConfig.php:305 includes/reduxConfig.php:761
+#: includes/reduxConfig.php:305 includes/reduxConfig.php:738
 msgid "Description Here"
 msgstr ""
 
-#: includes/reduxConfig.php:306 includes/reduxConfig.php:762
+#: includes/reduxConfig.php:306 includes/reduxConfig.php:739
 msgid "Give us a link!"
 msgstr ""
 
@@ -847,637 +967,611 @@ msgstr ""
 msgid "You can show Hot Deal product on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:492
-msgid "Show Hot Deal on Product Detail Page"
-msgstr ""
-
 #: includes/reduxConfig.php:493
-msgid "You can show Hot Deal on Product Detail page."
-msgstr ""
-
-#: includes/reduxConfig.php:501
 msgid "Show New Products"
 msgstr ""
 
-#: includes/reduxConfig.php:502
+#: includes/reduxConfig.php:494
 msgid "You can show Show New Products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:510
+#: includes/reduxConfig.php:502
 msgid "New Product Category"
 msgstr ""
 
-#: includes/reduxConfig.php:512
+#: includes/reduxConfig.php:504
 msgid "Please choose New Product Category to show  its product in home page."
 msgstr ""
 
-#: includes/reduxConfig.php:520
+#: includes/reduxConfig.php:512
 msgid "Show Best Seller Products"
 msgstr ""
 
-#: includes/reduxConfig.php:521
+#: includes/reduxConfig.php:513
 msgid "You can show best seller products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:530
+#: includes/reduxConfig.php:522
 msgid "Home bestseller products text"
 msgstr ""
 
-#: includes/reduxConfig.php:532
+#: includes/reduxConfig.php:524
 msgid "home page bestseller_products-text "
 msgstr ""
 
-#: includes/reduxConfig.php:540
+#: includes/reduxConfig.php:532
 msgid "Home Best seller   Url"
 msgstr ""
 
-#: includes/reduxConfig.php:541
+#: includes/reduxConfig.php:533
 msgid "Home Best seller  Url."
 msgstr ""
 
-#: includes/reduxConfig.php:547
+#: includes/reduxConfig.php:539
 msgid "Number of Bestseller Products"
 msgstr ""
 
-#: includes/reduxConfig.php:548
+#: includes/reduxConfig.php:540
 msgid "Number of Bestseller products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:556
+#: includes/reduxConfig.php:548
 msgid "Show Featured Products"
 msgstr ""
 
-#: includes/reduxConfig.php:557
+#: includes/reduxConfig.php:549
 msgid "You can show featured products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:564
+#: includes/reduxConfig.php:556
 msgid "Home Featured Products Text"
 msgstr ""
 
-#: includes/reduxConfig.php:566
+#: includes/reduxConfig.php:558
 msgid "home page featured products text "
 msgstr ""
 
-#: includes/reduxConfig.php:574
+#: includes/reduxConfig.php:566
 msgid "Home Featured  Url"
 msgstr ""
 
-#: includes/reduxConfig.php:575
+#: includes/reduxConfig.php:567
 msgid "Home Featured  Url."
 msgstr ""
 
-#: includes/reduxConfig.php:582
+#: includes/reduxConfig.php:574
 msgid "Number of Featured Products"
 msgstr ""
 
-#: includes/reduxConfig.php:583
+#: includes/reduxConfig.php:575
 msgid "Number of Featured products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:592
+#: includes/reduxConfig.php:584
 msgid "Show Recommended Products"
 msgstr ""
 
-#: includes/reduxConfig.php:593
+#: includes/reduxConfig.php:585
 msgid "You can show Recommended products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:599
+#: includes/reduxConfig.php:591
 msgid "Home Recommended Products Text"
 msgstr ""
 
-#: includes/reduxConfig.php:601
+#: includes/reduxConfig.php:593
 msgid "home page recommended products text "
 msgstr ""
 
-#: includes/reduxConfig.php:607
+#: includes/reduxConfig.php:599
 msgid "Home Recommended   Url"
 msgstr ""
 
-#: includes/reduxConfig.php:608
+#: includes/reduxConfig.php:600
 msgid "Home Recommended   Url."
 msgstr ""
 
-#: includes/reduxConfig.php:614
+#: includes/reduxConfig.php:606
 msgid "Number of Recommended Products"
 msgstr ""
 
-#: includes/reduxConfig.php:615
+#: includes/reduxConfig.php:607
 msgid "Number of Recommended products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:622
+#: includes/reduxConfig.php:614
 msgid "Show Related Products"
 msgstr ""
 
-#: includes/reduxConfig.php:623
+#: includes/reduxConfig.php:615
 msgid "You can show Related products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:629
+#: includes/reduxConfig.php:621
 msgid "Related products text"
 msgstr ""
 
-#: includes/reduxConfig.php:631
+#: includes/reduxConfig.php:623
 msgid "related products-text "
 msgstr ""
 
-#: includes/reduxConfig.php:638
+#: includes/reduxConfig.php:630
 msgid "Home Related   Url"
 msgstr ""
 
-#: includes/reduxConfig.php:639
+#: includes/reduxConfig.php:631
 msgid "Home Related  Url."
 msgstr ""
 
-#: includes/reduxConfig.php:645
+#: includes/reduxConfig.php:637
 msgid "Number of Related Products"
 msgstr ""
 
-#: includes/reduxConfig.php:646
+#: includes/reduxConfig.php:638
 msgid "Number of Related products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:653
+#: includes/reduxConfig.php:645
 msgid "Show Upsell Products"
 msgstr ""
 
-#: includes/reduxConfig.php:654
+#: includes/reduxConfig.php:646
 msgid "You can show Upsell products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:660
+#: includes/reduxConfig.php:652
 msgid "Upsell Products text"
 msgstr ""
 
-#: includes/reduxConfig.php:662
+#: includes/reduxConfig.php:654
 msgid "upsell products text "
 msgstr ""
 
-#: includes/reduxConfig.php:669
+#: includes/reduxConfig.php:661
 msgid "Home Upsell   Url"
 msgstr ""
 
-#: includes/reduxConfig.php:670
+#: includes/reduxConfig.php:662
 msgid "Home Upsell  Url."
 msgstr ""
 
-#: includes/reduxConfig.php:676
+#: includes/reduxConfig.php:668
 msgid "Number of Upsell Products"
 msgstr ""
 
-#: includes/reduxConfig.php:677
+#: includes/reduxConfig.php:669
 msgid "Number of Upsell products on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:683
+#: includes/reduxConfig.php:675
 msgid "Show cross sells Products"
 msgstr ""
 
-#: includes/reduxConfig.php:684
+#: includes/reduxConfig.php:676
 msgid "You can show cross sells products."
 msgstr ""
 
-#: includes/reduxConfig.php:691 includes/reduxConfig.php:692
+#: includes/reduxConfig.php:683 includes/reduxConfig.php:684
 msgid "Number of cross sells Products"
 msgstr ""
 
-#: includes/reduxConfig.php:699
+#: includes/reduxConfig.php:691
 msgid "Header breadcrumb image"
 msgstr ""
 
-#: includes/reduxConfig.php:701
+#: includes/reduxConfig.php:693
 msgid "Upload Header breadcrumb image "
 msgstr ""
 
-#: includes/reduxConfig.php:707
+#: includes/reduxConfig.php:699
 msgid "Show Home Blog"
 msgstr ""
 
-#: includes/reduxConfig.php:708
+#: includes/reduxConfig.php:700
 msgid "You can show latest blog post on home page."
 msgstr ""
 
-#: includes/reduxConfig.php:716
+#: includes/reduxConfig.php:708
 msgid "General Settings"
 msgstr ""
 
-#: includes/reduxConfig.php:722 includes/reduxConfig.php:723
-msgid "Set Category Page Default Layout"
-msgstr ""
-
-#: includes/reduxConfig.php:724
-msgid "You cans set Category Page Default Layout here "
-msgstr ""
-
-#: includes/reduxConfig.php:737
+#: includes/reduxConfig.php:714
 msgid "Product display in product category page"
 msgstr ""
 
-#: includes/reduxConfig.php:738 includes/reduxConfig.php:739
+#: includes/reduxConfig.php:715 includes/reduxConfig.php:716
 msgid "Number of item display in product category page"
 msgstr ""
 
-#: includes/reduxConfig.php:749
+#: includes/reduxConfig.php:726
 msgid "Enable Company Logo Uploads"
 msgstr ""
 
-#: includes/reduxConfig.php:750
+#: includes/reduxConfig.php:727
 msgid "You can enable/disable Company Logo Uploads"
 msgstr ""
 
-#: includes/reduxConfig.php:757
+#: includes/reduxConfig.php:734
 msgid "Company Logo Uploads"
 msgstr ""
 
-#: includes/reduxConfig.php:758
+#: includes/reduxConfig.php:735
 msgid "Unlimited Logo uploads with drag and drop sortings."
 msgstr ""
 
-#: includes/reduxConfig.php:769
+#: includes/reduxConfig.php:746
 msgid "Enable Product Page Social Share "
 msgstr ""
 
-#: includes/reduxConfig.php:770
+#: includes/reduxConfig.php:747
 msgid "You can enable/disable Product Page Social Share"
 msgstr ""
 
-#: includes/reduxConfig.php:777
+#: includes/reduxConfig.php:754
 msgid "Back To Top Button"
 msgstr ""
 
-#: includes/reduxConfig.php:778
+#: includes/reduxConfig.php:755
 msgid "Toggle whether or not to enable a back to top button on your pages."
 msgstr ""
 
-#: includes/reduxConfig.php:790
+#: includes/reduxConfig.php:767
 msgid "Styling Options"
 msgstr ""
 
-#: includes/reduxConfig.php:796
+#: includes/reduxConfig.php:773
 msgid "Use animation effect"
 msgstr ""
 
-#: includes/reduxConfig.php:806
+#: includes/reduxConfig.php:783
 msgid "Set Body Background"
 msgstr ""
 
-#: includes/reduxConfig.php:817
+#: includes/reduxConfig.php:794
 msgid "Body Background"
 msgstr ""
 
-#: includes/reduxConfig.php:818
+#: includes/reduxConfig.php:795
 msgid "Body background with image, color, etc."
 msgstr ""
 
-#: includes/reduxConfig.php:824
+#: includes/reduxConfig.php:801
 msgid "Footer Background Color"
 msgstr ""
 
-#: includes/reduxConfig.php:825
+#: includes/reduxConfig.php:802
 msgid "Pick a background color for the footer."
 msgstr ""
 
-#: includes/reduxConfig.php:834
+#: includes/reduxConfig.php:811
 msgid "Header Nav Menu Background"
 msgstr ""
 
-#: includes/reduxConfig.php:843
+#: includes/reduxConfig.php:820
 msgid "Header Background"
 msgstr ""
 
-#: includes/reduxConfig.php:855
+#: includes/reduxConfig.php:832
 msgid "Header"
 msgstr ""
 
-#: includes/reduxConfig.php:856
+#: includes/reduxConfig.php:833
 msgid "All header related options are listed here."
 msgstr ""
 
-#: includes/reduxConfig.php:862
+#: includes/reduxConfig.php:839
 msgid "Show Currency HTML"
 msgstr ""
 
-#: includes/reduxConfig.php:863
+#: includes/reduxConfig.php:840
 msgid "You can show Currency in the header."
 msgstr ""
 
-#: includes/reduxConfig.php:868
+#: includes/reduxConfig.php:845
 msgid "Show Language HTML"
 msgstr ""
 
-#: includes/reduxConfig.php:869
+#: includes/reduxConfig.php:846
 msgid "You can show Language in the header."
 msgstr ""
 
-#: includes/reduxConfig.php:874
+#: includes/reduxConfig.php:851
 msgid "Use Image for Logo?"
 msgstr ""
 
-#: includes/reduxConfig.php:875
+#: includes/reduxConfig.php:852
 msgid ""
 "If left unchecked, plain text will be used instead (generated from site "
 "name)."
 msgstr ""
 
-#: includes/reduxConfig.php:883
+#: includes/reduxConfig.php:860
 msgid "Logo Upload"
 msgstr ""
 
-#: includes/reduxConfig.php:885
+#: includes/reduxConfig.php:862
 msgid "Upload your logo here and enter the height of it below"
 msgstr ""
 
-#: includes/reduxConfig.php:891
+#: includes/reduxConfig.php:868
 msgid "Logo Height"
 msgstr ""
 
-#: includes/reduxConfig.php:892 includes/reduxConfig.php:901
+#: includes/reduxConfig.php:869 includes/reduxConfig.php:878
 msgid "Don't include \"px\" in the string. e.g. 30"
 msgstr ""
 
-#: includes/reduxConfig.php:900
+#: includes/reduxConfig.php:877
 msgid "Logo Width"
 msgstr ""
 
-#: includes/reduxConfig.php:909
+#: includes/reduxConfig.php:886
 msgid "Remove Header Search"
 msgstr ""
 
-#: includes/reduxConfig.php:910
+#: includes/reduxConfig.php:887
 msgid "Active to remove the search functionality from your header"
 msgstr ""
 
-#: includes/reduxConfig.php:917
-msgid "Enable Ajax Search"
-msgstr ""
-
-#: includes/reduxConfig.php:918
-msgid ""
-"Header ajax search active only when magik wooajax search plugin activated "
-"and option enable"
-msgstr ""
-
-#: includes/reduxConfig.php:925
+#: includes/reduxConfig.php:894
 msgid "Show Info Banners"
 msgstr ""
 
-#: includes/reduxConfig.php:934
+#: includes/reduxConfig.php:903
 msgid "Shipping Banner Text"
 msgstr ""
 
-#: includes/reduxConfig.php:941
+#: includes/reduxConfig.php:910
 msgid "Customer Support Banner Text"
 msgstr ""
 
-#: includes/reduxConfig.php:948
+#: includes/reduxConfig.php:917
 msgid "Warrant/Gaurantee Banner Text"
 msgstr ""
 
-#: includes/reduxConfig.php:954
+#: includes/reduxConfig.php:923
 msgid "Return service Banner Text"
 msgstr ""
 
-#: includes/reduxConfig.php:964
+#: includes/reduxConfig.php:933
 msgid "Menu"
 msgstr ""
 
-#: includes/reduxConfig.php:965
+#: includes/reduxConfig.php:934
 msgid "All Menu related options are listed here."
 msgstr ""
 
-#: includes/reduxConfig.php:971
+#: includes/reduxConfig.php:940
 msgid "Show Menu Arrow"
 msgstr ""
 
-#: includes/reduxConfig.php:972
+#: includes/reduxConfig.php:941
 msgid "Show arrow in menu."
 msgstr ""
 
-#: includes/reduxConfig.php:978
+#: includes/reduxConfig.php:947
 msgid "Show Login/sign and logout link"
 msgstr ""
 
-#: includes/reduxConfig.php:979
+#: includes/reduxConfig.php:948
 msgid "Please Select any option from above."
 msgstr ""
 
-#: includes/reduxConfig.php:994
+#: includes/reduxConfig.php:963
 msgid "Footer"
 msgstr ""
 
-#: includes/reduxConfig.php:995
+#: includes/reduxConfig.php:964
 msgid "All footer related options are listed here."
 msgstr ""
 
-#: includes/reduxConfig.php:1001
+#: includes/reduxConfig.php:970
 msgid "Enable Mailchimp Form"
 msgstr ""
 
-#: includes/reduxConfig.php:1002
+#: includes/reduxConfig.php:971
 msgid "You can enable/disable Mailchimp Form"
 msgstr ""
 
-#: includes/reduxConfig.php:1008
+#: includes/reduxConfig.php:977
 msgid "Custom Footer Color Scheme"
 msgstr ""
 
-#: includes/reduxConfig.php:1016
+#: includes/reduxConfig.php:985
 msgid "Footer Copyright Background Color"
 msgstr ""
 
-#: includes/reduxConfig.php:1025
+#: includes/reduxConfig.php:994
 msgid "Footer Copyright Font Color"
 msgstr ""
 
-#: includes/reduxConfig.php:1034
+#: includes/reduxConfig.php:1003
 msgid "Footer Text Home"
 msgstr ""
 
-#: includes/reduxConfig.php:1036 includes/reduxConfig.php:1053
-#: includes/reduxConfig.php:1061
+#: includes/reduxConfig.php:1005 includes/reduxConfig.php:1022
+#: includes/reduxConfig.php:1030
 msgid ""
 "You can use the following shortcodes in your footer text: [wp-url] [site-"
 "url] [theme-url] [login-url] [logout-url] [site-title] [site-tagline] "
 "[current-year]"
 msgstr ""
 
-#: includes/reduxConfig.php:1044
+#: includes/reduxConfig.php:1013
 msgid "Enable footer middle"
 msgstr ""
 
-#: includes/reduxConfig.php:1045
+#: includes/reduxConfig.php:1014
 msgid "You can enable/disable Footer Middle"
 msgstr ""
 
-#: includes/reduxConfig.php:1051
+#: includes/reduxConfig.php:1020
 msgid "Footer Middle Text "
 msgstr ""
 
-#: includes/reduxConfig.php:1060
+#: includes/reduxConfig.php:1029
 msgid "Bottom Footer Text"
 msgstr ""
 
-#: includes/reduxConfig.php:1062
+#: includes/reduxConfig.php:1031
 msgid "Powered by Magik"
 msgstr ""
 
-#: includes/reduxConfig.php:1072
+#: includes/reduxConfig.php:1041
 msgid "Blog Page"
 msgstr ""
 
-#: includes/reduxConfig.php:1077
+#: includes/reduxConfig.php:1046
 msgid "Blog Page Layout"
 msgstr ""
 
-#: includes/reduxConfig.php:1078
+#: includes/reduxConfig.php:1047
 msgid ""
 "Select main blog listing and category page layout from the available blog "
 "layouts."
 msgstr ""
 
-#: includes/reduxConfig.php:1100
+#: includes/reduxConfig.php:1069
 msgid "Author's Bio"
 msgstr ""
 
-#: includes/reduxConfig.php:1101
+#: includes/reduxConfig.php:1070
 msgid "Show Author Bio on Blog page."
 msgstr ""
 
-#: includes/reduxConfig.php:1108
+#: includes/reduxConfig.php:1077
 msgid "Display Post By"
 msgstr ""
 
-#: includes/reduxConfig.php:1110
+#: includes/reduxConfig.php:1079
 msgid "Display Psot by Author on Listing Page"
 msgstr ""
 
-#: includes/reduxConfig.php:1115
+#: includes/reduxConfig.php:1084
 msgid "Display Tags"
 msgstr ""
 
-#: includes/reduxConfig.php:1117
+#: includes/reduxConfig.php:1086
 msgid "Display tags at the bottom of posts."
 msgstr ""
 
-#: includes/reduxConfig.php:1122
+#: includes/reduxConfig.php:1091
 msgid "Display Full Date"
 msgstr ""
 
-#: includes/reduxConfig.php:1124
+#: includes/reduxConfig.php:1093
 msgid "This will add date of post meta on all blog pages."
 msgstr ""
 
-#: includes/reduxConfig.php:1130
+#: includes/reduxConfig.php:1099
 msgid "Display Comments Count"
 msgstr ""
 
-#: includes/reduxConfig.php:1131
+#: includes/reduxConfig.php:1100
 msgid "Display Comments Count on Blog Listing."
 msgstr ""
 
-#: includes/reduxConfig.php:1136
+#: includes/reduxConfig.php:1105
 msgid "Display Category"
 msgstr ""
 
-#: includes/reduxConfig.php:1138
+#: includes/reduxConfig.php:1107
 msgid "Display Comments Category on Blog Listing."
 msgstr ""
 
-#: includes/reduxConfig.php:1143
+#: includes/reduxConfig.php:1112
 msgid "Display View Counts"
 msgstr ""
 
-#: includes/reduxConfig.php:1145
+#: includes/reduxConfig.php:1114
 msgid "Display View Counts on Blog Listing."
 msgstr ""
 
-#: includes/reduxConfig.php:1152
+#: includes/reduxConfig.php:1121
 msgid "Social Media"
 msgstr ""
 
-#: includes/reduxConfig.php:1157
+#: includes/reduxConfig.php:1126
 msgid "Enable Social Link In Footer"
 msgstr ""
 
-#: includes/reduxConfig.php:1163
+#: includes/reduxConfig.php:1132
 msgid "Facebook URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1164
+#: includes/reduxConfig.php:1133
 msgid "Please enter in your Facebook URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1169
+#: includes/reduxConfig.php:1138
 msgid "Twitter URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1170
+#: includes/reduxConfig.php:1139
 msgid "Please enter in your Twitter URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1175
+#: includes/reduxConfig.php:1144
 msgid "Google+ URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1176
+#: includes/reduxConfig.php:1145
 msgid "Please enter in your Google Plus URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1182
+#: includes/reduxConfig.php:1151
 msgid "Pinterest URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1183
+#: includes/reduxConfig.php:1152
 msgid "Please enter in your Pinterest URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1188
+#: includes/reduxConfig.php:1157
 msgid "Youtube URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1189
+#: includes/reduxConfig.php:1158
 msgid "Please enter in your Youtube URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1194
+#: includes/reduxConfig.php:1163
 msgid "LinkedIn URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1195
+#: includes/reduxConfig.php:1164
 msgid "Please enter in your LinkedIn URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1200
+#: includes/reduxConfig.php:1169
 msgid "RSS URL"
 msgstr ""
 
-#: includes/reduxConfig.php:1201
+#: includes/reduxConfig.php:1170
 msgid "Please enter in your RSS URL."
 msgstr ""
 
-#: includes/reduxConfig.php:1206
-msgid "Instagram URL"
-msgstr ""
-
-#: includes/reduxConfig.php:1207
-msgid "Please enter in your Instagram URL."
-msgstr ""
-
-#: includes/reduxConfig.php:1217
+#: includes/reduxConfig.php:1180
 msgid "Documentation"
 msgstr ""
 
-#: includes/reduxConfig.php:1332
+#: includes/reduxConfig.php:1295
 msgid "Section via hook"
 msgstr ""
 
-#: includes/reduxConfig.php:1333
+#: includes/reduxConfig.php:1296
 msgid ""
 "<p class=\"description\">This is a section created by adding a filter to the "
 "sections array. Can be used by child themes to add/remove sections from the "
 "options.</p>"
+msgstr ""
+
+#: includes/widget.php:145
+msgid "Click to browse icon"
+msgstr ""
+
+#: includes/widget.php:145
+msgid "Browse..."
 msgstr ""
 
 #: includes/tgm_activation/class-tgm-plugin-activation.php:334
@@ -1502,6 +1596,70 @@ msgstr ""
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
+#: includes/tgm_activation/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
 #: includes/tgm_activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr ""
@@ -1519,8 +1677,11 @@ msgid "Plugin activated successfully."
 msgstr ""
 
 #: includes/tgm_activation/class-tgm-plugin-activation.php:395
+#: includes/tgm_activation/class-tgm-plugin-activation.php:3037
 msgid "The following plugin was activated successfully:"
-msgstr ""
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
 
 #: includes/tgm_activation/class-tgm-plugin-activation.php:397
 #, php-format
@@ -1580,6 +1741,12 @@ msgid ""
 "not packaged in a folder."
 msgstr ""
 
+#: includes/tgm_activation/class-tgm-plugin-activation.php:1206
+#: includes/tgm_activation/class-tgm-plugin-activation.php:3033
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
 #: includes/tgm_activation/class-tgm-plugin-activation.php:2067
 #, php-format
 msgid "TGMPA v%s"
@@ -1627,6 +1794,46 @@ msgstr ""
 
 #: includes/tgm_activation/class-tgm-plugin-activation.php:2418
 msgid "Update recommended"
+msgstr ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:2427
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:2473
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:2477
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:2481
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tgm_activation/class-tgm-plugin-activation.php:2567
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
 msgstr ""
 
 #: includes/tgm_activation/class-tgm-plugin-activation.php:2575
@@ -1786,301 +1993,127 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/tgm_activation/install-required.php:91
-msgid "WooCommerce Currency Switcher"
-msgstr ""
-
-#: includes/tgm_activation/install-required.php:97
-msgid "WooCommerce Variation Swatches"
-msgstr ""
-
-#: includes/tgm_activation/install-required.php:103
-msgid "Contact Form 7"
-msgstr ""
-
-#: includes/tgm_activation/install-required.php:109
-msgid "Magik Infinite Scroller"
-msgstr ""
-
-#: includes/tgm_activation/install-required.php:116
-msgid "Magik Catalog Mode"
-msgstr ""
-
-#: includes/tgm_activation/install-required.php:123
-msgid "Magik Woo Ajax Search"
-msgstr ""
-
-#: includes/widget.php:145
-msgid "Click to browse icon"
-msgstr ""
-
-#: includes/widget.php:145
-msgid "Browse..."
-msgstr ""
-
-#: js/revolution-slider.js:559
-msgid "easing.Ease"
-msgstr ""
-
-#: js/revolution-slider.js:565
-msgid "easing."
-msgstr ""
-
-#: js/revolution-slider.js:575
-msgid "events.EventDispatcher"
-msgstr ""
-
-#: js/revolution-slider.js:609
-msgid "Ticker"
-msgstr ""
-
-#: js/revolution-slider.js:638
-msgid "core.Animation"
-msgstr ""
-
-#: js/revolution-slider.js:731
-msgid "core.SimpleTimeline"
-msgstr ""
-
-#: js/revolution-slider.js:747
-msgid "TweenLite"
-msgstr ""
-
-#: js/revolution-slider.js:1040
-msgid "plugins.TweenPlugin"
-msgstr ""
-
-#: js/revolution-slider.js:1093
-msgid "plugins."
-msgstr ""
-
-#: search.php:47
-#, php-format
-msgid "Search Results for: %s"
-msgstr ""
-
 #: skins/default/functions.php:14 skins/default/functions.php:15
-#: skins/default/functions.php:18 skins/version2/functions.php:95
+#: skins/default/functions.php:18 skins/version2/functions.php:83
 msgid "English"
 msgstr ""
 
-#: skins/default/functions.php:19 skins/version2/functions.php:96
+#: skins/default/functions.php:19 skins/version2/functions.php:84
 msgid "French"
 msgstr ""
 
-#: skins/default/functions.php:20 skins/version2/functions.php:97
+#: skins/default/functions.php:20 skins/version2/functions.php:85
 msgid "German"
 msgstr ""
 
-#: skins/default/functions.php:67
+#: skins/default/functions.php:30
+msgid "USD"
+msgstr ""
+
+#: skins/default/functions.php:34
 msgid "$ - Dollar"
 msgstr ""
 
-#: skins/default/functions.php:73
-msgid "&#163; - Pound"
+#: skins/default/functions.php:39
+msgid "&pound; - Pound"
 msgstr ""
 
-#: skins/default/functions.php:95
+#: skins/default/functions.php:44
+msgid "&euro; - Euro"
+msgstr ""
+
+#: skins/default/functions.php:65
 msgid "You are logged in as"
 msgstr ""
 
-#: skins/default/functions.php:168
+#: skins/default/functions.php:129
 msgid "Search entire store here..."
 msgstr ""
 
-#: skins/default/functions.php:371 skins/default/functions.php:389
-#: skins/default/functions.php:406 skins/default/functions.php:423
-#: skins/default/functions.php:441
+#: skins/default/functions.php:332 skins/default/functions.php:350
+#: skins/default/functions.php:367 skins/default/functions.php:384
+#: skins/default/functions.php:402
 msgid "offer banner"
 msgstr ""
 
-#: skins/default/functions.php:518
+#: skins/default/functions.php:479
 msgid "Special"
 msgstr ""
 
-#: skins/default/functions.php:519 skins/default/functions.php:588
-#: skins/default/functions.php:744 woo_function.php:64 woo_function.php:154
-msgid "Products"
-msgstr ""
-
-#: skins/default/functions.php:527 skins/default/functions.php:603
-#: woo_function.php:72 woo_function.php:162
-msgid "VIEW ALL "
-msgstr ""
-
-#: skins/default/functions.php:548 skins/default/functions.php:629
-#: skins/default/functions.php:706 skins/default/functions.php:817
-#: skins/default/functions.php:891 woo_function.php:106 woo_function.php:201
-msgid "No products found"
-msgstr ""
-
-#: skins/default/functions.php:587
+#: skins/default/functions.php:548
 msgid "Featured"
 msgstr ""
 
-#: skins/default/functions.php:664
+#: skins/default/functions.php:618
 msgid "Best"
 msgstr ""
 
-#: skins/default/functions.php:665
+#: skins/default/functions.php:619
 msgid "Seller"
 msgstr ""
 
-#: skins/default/functions.php:679
+#: skins/default/functions.php:625
 msgid "VIEW ALL"
 msgstr ""
 
-#: skins/default/functions.php:744
+#: skins/default/functions.php:689
 msgid "New"
 msgstr ""
 
-#: skins/default/functions.php:927 skins/default/functions.php:1026
-#: skins/default/functions.php:1121 skins/version2/functions.php:347
-#: woocommerce/content-product.php:100 woocommerce/content-product.php:219
-#: woocommerce/single-product/product-image.php:83
-#: woocommerce/single-product/product-image.php:115
+#: skins/default/functions.php:871 skins/default/functions.php:970
+#: skins/default/functions.php:1065 skins/version2/functions.php:312
+#: woocommerce/content-product.php:81 woocommerce/content-product.php:200
+#: woocommerce/single-product/product-image.php:51
+#: woocommerce/single-product/product-image.php:91
 msgid "Sale"
 msgstr ""
 
-#: skins/default/functions.php:936 skins/default/functions.php:1034
-#: skins/default/functions.php:1129 skins/default/functions.php:1244
-#: skins/version2/functions.php:386 woocommerce/content-product.php:138
-#: woocommerce/content-product.php:230
+#: skins/default/functions.php:880 skins/default/functions.php:978
+#: skins/default/functions.php:1073 skins/default/functions.php:1188
+#: skins/version2/functions.php:351 woocommerce/content-product.php:119
+#: woocommerce/content-product.php:211
 msgid "Quick View"
 msgstr ""
 
-#: skins/default/functions.php:946 skins/default/functions.php:1044
-#: skins/default/functions.php:1139 skins/default/functions.php:1254
+#: skins/default/functions.php:890 skins/default/functions.php:988
+#: skins/default/functions.php:1083 skins/default/functions.php:1198
 msgid "Add to Wishlist"
 msgstr ""
 
-#: skins/default/functions.php:955 skins/default/functions.php:1053
-#: skins/default/functions.php:1148 skins/default/functions.php:1263
-#: woo_function.php:301 woocommerce/content-product.php:129
-#: woocommerce/content-product.php:252
-msgid "Add to Compare"
-msgstr ""
-
-#: skins/default/functions.php:1234
+#: skins/default/functions.php:1178
 msgid "hot"
 msgstr ""
 
-#: skins/default/functions.php:1362
+#: skins/default/functions.php:1306
 msgid "Latest"
 msgstr ""
 
-#: skins/default/functions.php:1362
+#: skins/default/functions.php:1306
 msgid "Blog"
 msgstr ""
 
-#: skins/default/functions.php:1409
+#: skins/default/functions.php:1353
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: skins/version2/functions.php:66 skins/version2/functions.php:71
+#: skins/version2/functions.php:54 skins/version2/functions.php:59
 msgid "Search"
 msgstr ""
 
-#: skins/version2/functions.php:132
+#: skins/version2/functions.php:97
 msgid "$"
 msgstr ""
 
-#: skins/version2/functions.php:136
+#: skins/version2/functions.php:101
 msgid "&pound;"
 msgstr ""
 
-#: skins/version2/functions.php:140
+#: skins/version2/functions.php:105
 msgid "&euro;"
 msgstr ""
 
 #: skins/version2/header.php:53 skins/version2/header.php:130
 msgid "clicker:"
-msgstr ""
-
-#: woo_function.php:63
-msgid "Related"
-msgstr ""
-
-#: woo_function.php:83
-msgid "Related Products"
-msgstr ""
-
-#: woo_function.php:153
-msgid "Upsell"
-msgstr ""
-
-#: woo_function.php:174
-msgid "Upsell Products"
-msgstr ""
-
-#: woo_function.php:272
-#, php-format
-msgid "Rated %s out of 5"
-msgstr ""
-
-#: woo_function.php:286
-msgid "List"
-msgstr ""
-
-#: woo_function.php:330 woocommerce/content-product.php:117
-#: woocommerce/content-product.php:241
-msgid "Add to WishList"
-msgstr ""
-
-#: woo_function.php:341
-msgid "Proceed to Checkout"
-msgstr ""
-
-#: woo_function.php:572
-msgid "Hot deal on Product Detail Page"
-msgstr ""
-
-#: woo_function.php:573
-msgid "Tick checkbox to set product as hot deal on Product Detail Page"
-msgstr ""
-
-#: woo_function.php:581
-msgid "Hot deal On Home Page"
-msgstr ""
-
-#: woo_function.php:582
-msgid "Tick checkbox to set product as hot deal on home page"
-msgstr ""
-
-#: woo_function.php:609
-msgid "days"
-msgstr ""
-
-#: woo_function.php:609
-msgid "hrs"
-msgstr ""
-
-#: woo_function.php:609
-msgid "mins"
-msgstr ""
-
-#: woo_function.php:609
-msgid "sec"
-msgstr ""
-
-#: woo_function.php:683 woo_function.php:778
-msgid "Magik Thumbnail"
-msgstr ""
-
-#: woo_function.php:687 woo_function.php:783
-msgid "Upload/Add image"
-msgstr ""
-
-#: woo_function.php:688 woo_function.php:784
-msgid "Remove image"
-msgstr ""
-
-#: woo_function.php:712 woo_function.php:808
-msgid "Choose an image"
-msgstr ""
-
-#: woo_function.php:714 woo_function.php:810
-msgid "Use image"
 msgstr ""
 
 #: woocommerce/cart/cart-totals.php:27
@@ -2101,8 +2134,7 @@ msgid "estimated for %s"
 msgstr ""
 
 #: woocommerce/cart/cart-totals.php:91 woocommerce/cart/cart-totals.php:92
-#: woocommerce/cart/cart.php:42 woocommerce/cart/cart.php:119
-#: woocommerce/myaccount/my-orders.php:28
+#: woocommerce/cart/cart.php:42 woocommerce/myaccount/my-orders.php:28
 msgid "Total"
 msgstr ""
 
@@ -2114,43 +2146,43 @@ msgstr ""
 msgid "Price"
 msgstr ""
 
-#: woocommerce/cart/cart.php:41 woocommerce/cart/cart.php:100
+#: woocommerce/cart/cart.php:41 woocommerce/global/quantity-input.php:34
 msgid "Quantity"
 msgstr ""
 
-#: woocommerce/cart/cart.php:86
+#: woocommerce/cart/cart.php:84
 msgid "Available on backorder"
 msgstr ""
 
-#: woocommerce/cart/cart.php:132
+#: woocommerce/cart/cart.php:128
 msgid "Remove this item"
 msgstr ""
 
-#: woocommerce/cart/cart.php:151
+#: woocommerce/cart/cart.php:147
 msgid "Continue Shopping"
 msgstr ""
 
-#: woocommerce/cart/cart.php:153
+#: woocommerce/cart/cart.php:149
 msgid "Update cart"
 msgstr ""
 
-#: woocommerce/cart/cart.php:155 woocommerce/cart/cart.php:156
+#: woocommerce/cart/cart.php:151 woocommerce/cart/cart.php:152
 msgid "Clear Cart"
 msgstr ""
 
-#: woocommerce/cart/cart.php:176
+#: woocommerce/cart/cart.php:172
 msgid "Discount Codes"
 msgstr ""
 
-#: woocommerce/cart/cart.php:178
+#: woocommerce/cart/cart.php:174
 msgid "Enter your coupon code if you have one"
 msgstr ""
 
-#: woocommerce/cart/cart.php:179
+#: woocommerce/cart/cart.php:175
 msgid "Coupon code"
 msgstr ""
 
-#: woocommerce/cart/cart.php:179
+#: woocommerce/cart/cart.php:175
 msgid "Apply Coupon"
 msgstr ""
 
@@ -2170,11 +2202,11 @@ msgstr ""
 msgid "Create an account?"
 msgstr ""
 
-#: woocommerce/checkout/form-checkout.php:26
+#: woocommerce/checkout/form-checkout.php:22
 msgid "You must be logged in to checkout."
 msgstr ""
 
-#: woocommerce/checkout/form-checkout.php:52
+#: woocommerce/checkout/form-checkout.php:48
 msgid "Your order"
 msgstr ""
 
@@ -2182,41 +2214,52 @@ msgstr ""
 msgid "Products tagged &ldquo;"
 msgstr ""
 
-#: woocommerce/global/quantity-input.php:30
-#, php-format
-msgid "%s quantity"
+#: woocommerce/global/quantity-input.php:35
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
 msgstr ""
 
 #: woocommerce/loop/no-products-found.php:17
 msgid "No products were found matching your selection."
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:39
+#: woocommerce/loop/result-count.php:40
+#, php-format
+msgid "Showing the single result"
+msgid_plural "Showing all %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/loop/result-count.php:43
+#, php-format
+msgctxt "with first and last result"
+msgid "Showing the single result"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/form-login.php:44
 msgid "Username or email address"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:43
-#: woocommerce/myaccount/form-login.php:94
+#: woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:98
 msgid "Password"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:52
+#: woocommerce/myaccount/form-login.php:58
 msgid "Remember me"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:54
-msgid "Log in"
-msgstr ""
-
-#: woocommerce/myaccount/form-login.php:58
+#: woocommerce/myaccount/form-login.php:62
 msgid "Lost your password?"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:80
+#: woocommerce/myaccount/form-login.php:84
 msgid "Username"
 msgstr ""
 
-#: woocommerce/myaccount/form-login.php:87
+#: woocommerce/myaccount/form-login.php:91
 msgid "Email address"
 msgstr ""
 
@@ -2231,6 +2274,18 @@ msgstr ""
 #: woocommerce/myaccount/my-orders.php:42
 msgid "Recent Orders"
 msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:67
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:77
+#, php-format
+msgid "%s for %s item"
+msgid_plural "%s for %s items"
+msgstr[0] ""
+msgstr[1] ""
 
 #: woocommerce/myaccount/my-orders.php:84
 msgid "Pay"
@@ -2253,14 +2308,6 @@ msgstr ""
 msgid "l jS \\o\\f F Y, h:ia"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:30
-msgid "This product is currently out of stock and unavailable."
-msgstr ""
-
-#: woocommerce/single-product/add-to-cart/variable.php:44
-msgid "Clear"
-msgstr ""
-
 #: woocommerce/single-product/price.php:28
 msgid "In Stock"
 msgstr ""
@@ -2269,13 +2316,21 @@ msgstr ""
 msgid "Out of Stock"
 msgstr ""
 
-#: woocommerce/single-product/product-image.php:97
-#: woocommerce/single-product/product-image.php:129
+#: woocommerce/single-product/product-image.php:73
+#: woocommerce/single-product/product-image.php:113
 msgid "Awaiting product image"
 msgstr ""
 
-#: woocommerce/single-product/short-description.php:33
+#: woocommerce/single-product/short-description.php:22
 msgid "Quick Overview"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:43
+msgid "Clear"
 msgstr ""
 
 #: woocommerce/single-product/tabs/additional-information.php:16
@@ -2284,4 +2339,16 @@ msgstr ""
 
 #: woocommerce/single-product/tabs/description.php:16
 msgid "Product Description"
+msgstr ""
+
+
+
+
+msgid "mins"
+msgstr ""
+msgid "days"
+msgstr ""
+msgid "hrs"
+msgstr ""
+msgid "sec"
 msgstr ""

@@ -11,19 +11,16 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.5.1
+ * @version 3.3.2
  */
-
-
 defined( 'ABSPATH' ) || exit;
 
 // Note: `wc_get_gallery_image_html` was added in WC 3.3.2 and did not exist prior. This check protects against theme overrides being used on older versions of WC.
 if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
   return;
 }
-
-
 
 
 global $post, $woocommerce, $product,$creta_Options;
@@ -85,7 +82,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
          <?php endif; ?>
 
 
-        <figure class="woocommerce-product-gallery__wrapper product-full">
+        <figure class="woocommerce-product-gallery__wrapper">
           <?php
          
           if ( has_post_thumbnail() ) {
@@ -115,14 +112,12 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
                     <?php esc_attr_e('Sale', 'creta'); ?>
                 </div>
               <?php endif; ?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 
-    
-        <figure class="woocommerce-product-gallery__wrapper product-full">
+      <div class="product-full">    <figure class="woocommerce-product-gallery__wrapper">
       <?php
       if ( has_post_thumbnail() ) {
   
-       $html  = '<div data-thumb="' .  esc_url( $thumbnail_src[0] ). '" class="woocommerce-product-gallery__image "><a class="woocommerce-main-image zoom cloud-zoom"><img id="product-zoom" class="attachment-shop_single size-shop_single wp-post-image " src="'.esc_url( $full_src[0] ).'" data-zoom-image="'.esc_url( $full_src[0] ).'" data-large_image="'.$image_link.'" data-large_image_width="800" data-large_image_height="800"/>';
+       $html  = '<div data-thumb="' .  esc_url( $thumbnail_src[0] ). '" class="woocommerce-product-gallery__image "><a class="zoom cloud-zoom"><img id="product-zoom" class="attachment-shop_single size-shop_single wp-post-image zoomImg" src="'.esc_url( $full_src[0] ).'" data-zoom-image="'.esc_url( $full_src[0] ).'" />';
        $html .= '</a></div>';
      } else {
       $html  = '<div class="woocommerce-product-gallery__image--placeholder">';
@@ -134,15 +129,13 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 
     echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
 ?>
+  </figure>
+</div>
+
 <?php
     do_action( 'woocommerce_product_thumbnails' );
     ?>
-  </figure>
-
-
-
-
-   </div>
+   
 </div>
 <?php }?>                    
            

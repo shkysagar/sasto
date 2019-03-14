@@ -86,46 +86,6 @@ function magikCreta_register_required_plugins()
             'required' => false, // If false, the plugin is only 'recommended' instead of required.
 
         )
-         ,
-          array(
-            'name' => esc_html__( 'WooCommerce Currency Switcher','creta'), // The plugin name.
-            'slug' => 'woocommerce-currency-switcher', // The plugin slug (typically the folder name).
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-
-        ),
-           array(
-            'name' =>esc_html__( 'WooCommerce Variation Swatches','creta'), // The plugin name.
-            'slug' => 'woo-variation-swatches', // The plugin slug (typically the folder name).
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-
-        ),
-         array(
-            'name' =>esc_html__('Contact Form 7','creta'), // The plugin name.
-            'slug' => 'contact-form-7', // The plugin slug (typically the folder name).
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-
-        ),
-            array(
-            'name'                     => esc_html__('Magik Infinite Scroller','creta'),
-            'slug'                     => 'magik-infinite-scroller',
-            'source'                   => MAGIKCRETA_CUS_PLUGIN_PATH . '/magik-infinite-scroller.zip',
-            'required'                 => false,
-            'version'                  => '1.0',               
-        ),
-            array(
-            'name'                     => esc_html__('Magik Catalog Mode','creta'),
-            'slug'                     => 'magik-catalog-mode',
-            'source'                   => MAGIKCRETA_CUS_PLUGIN_PATH . '/magik-catalog-mode.zip',
-            'required'                 => false,
-            'version'                  => '1.0',               
-        ),
-             array(
-            'name'                     => esc_html__('Magik Woo Ajax Search','creta'),
-            'slug'                     => 'magik-wooajax-search',
-            'source'                   => MAGIKCRETA_CUS_PLUGIN_PATH . '/magik-wooajax-search.zip',
-            'required'                 => false,
-            'version'                  => '1.0',               
-        )
     );
 
   /*

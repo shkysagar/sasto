@@ -1,20 +1,19 @@
 
 // file upload
 var file_upload;
-"use strict";
+
 jQuery(document).on( 'click', '.button_upload_image', function( event ){
- 
-   
+
     event.preventDefault();
 
     // If the media frame already exists, reopen it.
-    // if ( file_upload ) {
-    //     file_upload.open();
-    //     return;
-    // }
+    if ( file_upload ) {
+        file_upload.open();
+        return;
+    }
     
     var clickedID = jQuery(this).attr('id');    
-   // alert(clickedID);
+    
     // Create the media frame.
     file_upload = wp.media.frames.downloadable_file = wp.media({
         title: 'Choose an image',
@@ -31,13 +30,9 @@ jQuery(document).on( 'click', '.button_upload_image', function( event ){
         jQuery('#' + clickedID).val( attachment.url );
         if (jQuery('#' + clickedID).attr('data-name'))
             jQuery('#' + clickedID).attr('name', jQuery('#' + clickedID).attr('data-name'));
-     
     });
 
     file_upload.open();
- 
-   
-
 });
 
 jQuery(document).on( 'click', '.button_remove_image', function( event ){
@@ -190,11 +185,3 @@ jQuery(function($) {
      
 });
 
- jQuery(function(jQuery){        
-    "use strict";
-       jQuery(document.body).on('click','.of-radio-img-img',function(){ 
-          jQuery(this).parents('.tile_img_wrap').find('.of-radio-img-img').removeClass('of-radio-img-selected');
-          jQuery(this).parent().find('.of-radio-img-radio').attr('checked','checked');
-          jQuery(this).addClass('of-radio-img-selected');
-        });            
-    });

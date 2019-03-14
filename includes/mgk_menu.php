@@ -567,8 +567,8 @@ if (!class_exists('MagikCreta_top_navwalker')) {
             $active = "";
 
             // depth dependent classes
-           
-             if ( $item->current)
+
+            if ( $item->current)
                 $active = 'active';
 
             // passed classes
@@ -594,11 +594,11 @@ if (!class_exists('MagikCreta_top_navwalker')) {
                     $popup_bg_pos = $item->popup_bg_pos ? ';background-position:'.$item->popup_bg_pos.';' : '';
                     $popup_bg_repeat = $item->popup_bg_repeat ? ';background-repeat:'.$item->popup_bg_repeat.';' : '';
                     $popup_bg_size = $item->popup_bg_size ? ';background-size:'.$item->popup_bg_size.';' : '';
-                   
+
 
                     $popup_style = str_replace('"', '\'', $item->popup_style . $popup_bg_image . $popup_bg_pos . $popup_bg_repeat . $popup_bg_size );
                 } else {
-                    $menu_type = " narrow";
+                    $menu_type = " list-group-item";
                 }
                 $popup_pos = " ". $item->popup_pos;
             }
@@ -617,7 +617,7 @@ if (!class_exists('MagikCreta_top_navwalker')) {
                 if ($item->cols > 1) {
                     $cols = (int)$item->cols;
                 }
-              
+
                 $output .= $indent . '<li id="nav-menu-item-'. esc_html($item->ID) . '" class="' . $class_names . ' ' . $active . $sub . $menu_type . $popup_pos . $popup_cols . '" data-cols="'.$cols.'"'.$sub_popup_style.'>';
             } else {
                 $output .= $indent . '<li id="nav-menu-item-'. esc_html($item->ID) . '" class="' . $class_names . ' ' . $active . $sub . $menu_type . $popup_pos . $popup_cols . '">';
@@ -638,7 +638,7 @@ if (!class_exists('MagikCreta_top_navwalker')) {
             $item_output = $args->before;
             if ( $item->hide == "" ) {
                 if ( $item->nolink == "" ) {
-                    $item_output .= '<a'. $attributes .'><span>';
+                    $item_output .= '<a'. $attributes .'>';
                 } else{
                     $item_output .= '<h5>';
                 }
@@ -657,12 +657,12 @@ if (!class_exists('MagikCreta_top_navwalker')) {
                     $item_output .= '<span class="tip" style="'.$item_style.'"><span class="tip-arrow" style="'.$item_arrow_style.'"></span>'.$item->tip_label.'</span>';
                 }
                 if ( $item->nolink == "" ) {
-                    $item_output .= '</span></a>';
+                    $item_output .= '</a>';
                 } else {
                     $item_output .= '</h5>';
                 }
             }
-          
+
             $item_output .= $args->after;
             $args->popup_style = $popup_style;
 
