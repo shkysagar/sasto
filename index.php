@@ -8,6 +8,17 @@ else
 {
 $design=''; 
 }
+
+$url_design = isset($_GET['layout']) ? $_GET['layout'] : '';
+if (isset($url_design) && !empty($url_design )) {
+
+    $layout_array=array("left"=>"1","right"=>"2","full"=>"3"); 
+    
+    $design = $layout_array[$url_design];
+   
+}
+
+
 $leftbar = $rightbar = $main = '';
 
 switch ((int)$design) {

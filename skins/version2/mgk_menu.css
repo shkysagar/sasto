@@ -389,7 +389,7 @@
 	padding: 0 10px; margin-bottom:15px;
 }
 .mega-menu .wide .mgk-popup > .inner > ul.sub-menu > li.menu-item.women-img {
-	width: 578px !important;
+	width: 580px !important;
 	margin-right: 16px;
 	margin-left: 5px; margin-bottom:20px;
 }
@@ -1560,6 +1560,12 @@ ul.top-links1.mega-menu1 {
 	overflow: auto;
 	max-height: 500px;
 }
+
+.mega-menu .wide .mgk-popup > .inner > ul.sub-menu > li.menu-item.imgitem
+{
+	padding: 0px !important;
+} 
+
  @media (max-width: 480px) {
 #main-menu {
 	display: inline !important;

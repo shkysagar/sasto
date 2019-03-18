@@ -569,8 +569,8 @@ function magikCreta_woocommerce_general_product_data_custom_field() {
                 array(
                     'id' => 'hotdeal_on_productpage',
                     'wrapper_class' => 'checkbox_class',
-                    'label' => esc_html__('Hot deal on Product Deatil Page', 'creta' ),
-                    'description' => esc_html__( 'Tick checkbox to set product as hot deal on Product Deatil Page', 'creta' )
+                    'label' => esc_html__('Hot deal on Product Detail Page', 'creta' ),
+                    'description' => esc_html__( 'Tick checkbox to set product as hot deal on Product Detail Page', 'creta' )
                 )
             );
 
@@ -606,7 +606,7 @@ function magikCreta_hotdeal_timer_js()
 <script type="text/javascript">
 jQuery('.timer-grid').each(function(){
     var countTime=jQuery(this).attr('data-time');
-    jQuery(this).countdown(countTime,function(event){jQuery(this).html('<div class="day box-time-date"><span class="number">'+event.strftime('%D')+' </span>days</div> <div class="hour box-time-date"><span class="number">'+event.strftime('%H')+'</span>hrs</div><div class="min box-time-date"><span class="number">'+event.strftime('%M')+'</span> mins</div> <div class="sec box-time-date"><span class="number">'+event.strftime('%S')+' </span>sec</div>')});
+    jQuery(this).countdown(countTime,function(event){jQuery(this).html('<div class="day box-time-date"><span class="number">'+event.strftime('%D')+' </span><?php esc_html_e('days','creta');?></div> <div class="hour box-time-date"><span class="number">'+event.strftime('%H')+'</span><?php esc_html_e('hrs','creta');?></div><div class="min box-time-date"><span class="number">'+event.strftime('%M')+'</span> <?php esc_html_e('mins','creta');?></div> <div class="sec box-time-date"><span class="number">'+event.strftime('%S')+' </span><?php esc_html_e('sec','creta');?></div>')});
     
 });
 </script>

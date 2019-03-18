@@ -12,8 +12,9 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.4.0
+ * @version 3.5.0
  */
+
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -35,10 +36,10 @@ do_action( 'woocommerce_before_cart' ); ?>
         <thead>
             <tr>                
                 <th>&nbsp;</th>
-                <th><?php _e( 'Product', 'woocommerce' ); ?></th>
-                <th><?php _e( 'Price', 'woocommerce' ); ?></th>
-                <th><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-                <th><?php _e( 'Total', 'woocommerce' ); ?></th>
+                <th><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+                <th><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
+                <th><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
+                <th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
                  <th>&nbsp;</th>
             </tr>
         </thead>

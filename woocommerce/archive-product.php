@@ -80,10 +80,12 @@ else{
 ?>
 
   <?php  if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout']=='version2')
-{      
-?> 
-<script type="text/javascript"><!--
+{  
 
+?> 
+<script type="text/javascript">
+function grid_list_load()
+  {
     jQuery(function ($) {
 
         "use strict";
@@ -97,7 +99,7 @@ else{
                 jQuery(".button-grid").removeClass("button-active");
                 jQuery(".button-list").addClass("button-active");
            
-                jQuery('.category-products .products-grid').attr('class', 'products-list');
+                jQuery('.category-products .products-grid').attr('class', 'products-list products');
 
 
                 jQuery('ul.products-list  > li.item').each(function (index, element) {
@@ -247,9 +249,18 @@ else{
 
 
     });
-    //--></script>
+
+
+
+}
+
+ grid_list_load();
+  
+    </script>
 <?php } else{ ?>
-<script type="text/javascript"><!--
+<script type="text/javascript">
+    function grid_list_load()
+  {
 
     jQuery(function ($) {
 
@@ -264,7 +275,7 @@ else{
                 jQuery(".button-grid").removeClass("button-active");
                 jQuery(".button-list").addClass("button-active");
             
-                jQuery('.category-products .products-grid').attr('class', 'products-list');
+                jQuery('.category-products .products-grid').attr('class', 'products-list products');
 
 
                 jQuery('ul.products-list  > li.item').each(function (index, element) {
@@ -426,7 +437,11 @@ else{
 
 
     });
-    //--></script>
+
+}
+
+ grid_list_load();
+   </script>
 
     <?php } ?>
 

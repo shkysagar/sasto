@@ -96,7 +96,9 @@ if ( typeof define === 'function' && define.amd ) {
 	function UISearch( el, options ) {	
 		this.el = el;
 		this.inputEl = el.querySelector( 'form > input.search-bar-input' );
+		if (this.inputEl != null) {
 		this._initEvents();
+	}
 	}
 
 	UISearch.prototype = {
@@ -118,9 +120,11 @@ if ( typeof define === 'function' && define.amd ) {
 				}
 
 			this.el.addEventListener( 'click', initSearchFn );
-			this.el.addEventListener( 'touchstart', initSearchFn );
+			this.el.addEventListener( 'touchstart', initSearchFn );	
+			
 			this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });
 			this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); } );
+		
 		},
 		open : function() {
 			var self = this;
@@ -1095,7 +1099,7 @@ jQuery(document).on('click', 'a.compare', function(e) {
 /* variation image change js version2 */
 
  jQuery(document).ready(function () {
-     jQuery(".variations_form .variations select" ).click(function () { 
+     jQuery(".version2 .variations_form .variations select" ).click(function () { 
          var varimg= jQuery( ".images a.woocommerce-main-image").attr('href');          
     
          jQuery(".product-img-box .images .cloud-zoom-big").css('background-image', varimg );
