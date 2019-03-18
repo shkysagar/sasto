@@ -80,12 +80,10 @@ else{
 ?>
 
   <?php  if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout']=='version2')
-{  
-
+{      
 ?> 
-<script type="text/javascript">
-function grid_list_load()
-  {
+<script type="text/javascript"><!--
+
     jQuery(function ($) {
 
         "use strict";
@@ -99,7 +97,7 @@ function grid_list_load()
                 jQuery(".button-grid").removeClass("button-active");
                 jQuery(".button-list").addClass("button-active");
            
-                jQuery('.category-products .products-grid').attr('class', 'products-list products');
+                jQuery('.category-products .products-grid').attr('class', 'products-list');
 
 
                 jQuery('ul.products-list  > li.item').each(function (index, element) {
@@ -249,18 +247,9 @@ function grid_list_load()
 
 
     });
-
-
-
-}
-
- grid_list_load();
-  
-    </script>
+    //--></script>
 <?php } else{ ?>
-<script type="text/javascript">
-    function grid_list_load()
-  {
+<script type="text/javascript"><!--
 
     jQuery(function ($) {
 
@@ -275,7 +264,7 @@ function grid_list_load()
                 jQuery(".button-grid").removeClass("button-active");
                 jQuery(".button-list").addClass("button-active");
             
-                jQuery('.category-products .products-grid').attr('class', 'products-list products');
+                jQuery('.category-products .products-grid').attr('class', 'products-list');
 
 
                 jQuery('ul.products-list  > li.item').each(function (index, element) {
@@ -437,11 +426,7 @@ function grid_list_load()
 
 
     });
-
-}
-
- grid_list_load();
-   </script>
+    //--></script>
 
     <?php } ?>
 

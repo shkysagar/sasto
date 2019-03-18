@@ -48,19 +48,7 @@ if(!function_exists('magikCreta_search_form'))
     global $creta_Options;
   $MagikCreta = new MagikCreta();
   ?>
-
   <?php if (isset($creta_Options['header_remove_header_search']) && !$creta_Options['header_remove_header_search']) : ?>
-    <?php if(class_exists('MGK_Front_WooAjaxSearch') && isset($creta_Options['header_show_ajax_search']) && $creta_Options['header_show_ajax_search']==1)
-      {
-
-            
-         echo do_shortcode('[mgk_woocommerce_ajax_search]');
-
-               
-      }
-      else { ?> 
-
-
         <form name="myform" method="GET" action="<?php echo esc_url(home_url('/')); ?>">
             <input type="text" maxlength="128" value="<?php echo get_search_query(); ?>" 
             name="s"  placeholder="<?php esc_attr_e('Search', 'creta'); ?>" 
@@ -73,7 +61,7 @@ if(!function_exists('magikCreta_search_form'))
             </form>
 
  
-            <?php  } endif; ?>
+            <?php  endif; ?>
   <?php
   }
 }
@@ -101,38 +89,15 @@ function magikCreta_currency_language()
                               <!--form-language-->
                               <!-- END For version 1,2,3,4,6 -->
                               <!-- For version 1,2,3,4,6 -->
-                               <?php if(isset($creta_Options['enable_header_currency']) && ($creta_Options['enable_header_currency']!=0))
-    { 
-
-     global $wp,$wp_query;
-     $cururl=magikCreta_curPageURL();
-     if(class_exists('WOOCS'))
-     {
-       $usd_url =  add_query_arg( array("currency"=>"USD"), $cururl);
-       $gbp_url =  add_query_arg( array("currency"=>"GBP"),  $cururl);
-
-       $WOOCS=new WOOCS();
-
-     $currency_selected=$WOOCS->current_currency;
-     }
-     else{
-      
-      $usd_url = "#";
-      $gbp_url ="#";
-      $currency_selected="USD";
-    }
-
-  
-
-
-   ?>
+                              <?php if(isset($creta_Options['enable_header_currency']) && ($creta_Options['enable_header_currency']!=0))
+                                 { ?>
                               <div class="form-currency">
                                  <ul class="currencies_list">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo esc_url($usd_url);?>">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
                                        <?php esc_attr_e('$', 'creta');?>
                                        </a>
                                     </li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo esc_url($gbp_url) ;?>">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
                                        <?php esc_attr_e('&pound;', 'creta');?>
                                        </a>
                                     </li>

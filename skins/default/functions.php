@@ -23,63 +23,33 @@ function magikCreta_currency_language()
         <?php  
         } ?>
         
-    <?php if(isset($creta_Options['enable_header_currency']) && ($creta_Options['enable_header_currency']!=0))
-    { 
-
-     global $wp,$wp_query;
-     $cururl=magikCreta_curPageURL();
-     if(class_exists('WOOCS'))
-     {
-       $usd_url =  add_query_arg( array("currency"=>"USD"), $cururl);
-       $gbp_url =  add_query_arg( array("currency"=>"GBP"),  $cururl);
-
-       $WOOCS=new WOOCS();
-
-     $currency_selected=$WOOCS->current_currency;
-     }
-     else{
-      
-      $usd_url = "#";
-      $gbp_url ="#";
-      $currency_selected="USD";
-    }
-
-    if((isset($_GET['currency']) && $_GET['currency']=='GBP') || $currency_selected=='GBP')
-    {
-     
-     $elected_currency='<a role="button" data-toggle="dropdown" data-target="#" class="block-currency dropdown-toggle" href="'. esc_url($gbp_url).'">'  
-     . esc_attr("POUND", "creta").' <span class="caret"></span></a>';
-     
-   }
-   else{
-     $elected_currency='<a role="button" data-toggle="dropdown" data-target="#" class="block-currency dropdown-toggle" href="'.esc_url($usd_url).'">'  
-     . esc_attr("USD", "creta").' <span class="caret"></span></a>';
-   }
-
-
-   ?>
-
-   <div class="dropdown block-currency-wrapper"> 
-     <?php echo $elected_currency;?>
-     <ul class="dropdown-menu" role="menu">
-      <li role="presentation">
-        <a role="menuitem" tabindex="-1" href="<?php echo esc_url($usd_url);?>">
-          <?php esc_attr_e('$ - Dollar', 'creta');?>
-        </a>
-      </li>
-      
-      <li role="presentation">
-        <a role="menuitem" tabindex="-1" href="<?php echo esc_url($gbp_url) ;?>">
-          <?php esc_attr_e('&#163; - Pound', 'creta');?>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <?php  
-} 
+        <?php if(isset($creta_Options['enable_header_currency']) && ($creta_Options['enable_header_currency']!=0))
+        { ?>
+          <div class="dropdown block-currency-wrapper"> 
+            <a role="button" data-toggle="dropdown" data-target="#" class="block-currency dropdown-toggle" href="#">  
+              <?php esc_attr_e('USD', 'creta');?> <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">
+                <?php esc_attr_e('$ - Dollar', 'creta');?>
+                </a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">
+                <?php esc_attr_e('&pound; - Pound', 'creta');?>
+                </a>
+              </li>
+              <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">
+                <?php esc_attr_e('&euro; - Euro', 'creta');?>
+                </a>
+              </li>
+            </ul>
+          </div>
+        <?php  
+        } 
 }
 }
-
 
 if(!function_exists('magikCreta_msg'))
 {
@@ -153,15 +123,6 @@ if(!function_exists('magikCreta_search_form'))
   $MagikCreta = new MagikCreta();
   ?>
   <?php if (isset($creta_Options['header_remove_header_search']) && !$creta_Options['header_remove_header_search']) : ?>
-     <?php if(class_exists('MGK_Front_WooAjaxSearch') && isset($creta_Options['header_show_ajax_search']) && $creta_Options['header_show_ajax_search']==1)
-      {
-
-            
-         echo do_shortcode('[mgk_woocommerce_ajax_search]');
-
-               
-      }
-      else{?> 
             
   <div class="search-box">
 <form name="myform"  method="GET" action="<?php echo esc_url(home_url('/')); ?>">
@@ -173,7 +134,7 @@ if(!function_exists('magikCreta_search_form'))
                    
   </form>
   </div>
-   <?php } endif; ?>
+   <?php  endif; ?>
   <?php
   }
 }

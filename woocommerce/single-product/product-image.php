@@ -11,11 +11,10 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.5.1
+ * @version 3.3.2
  */
-
-
 defined( 'ABSPATH' ) || exit;
 
 // Note: `wc_get_gallery_image_html` was added in WC 3.3.2 and did not exist prior. This check protects against theme overrides being used on older versions of WC.
@@ -85,7 +84,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
          <?php endif; ?>
 
 
-        <figure class="woocommerce-product-gallery__wrapper product-full">
+        <figure class="woocommerce-product-gallery__wrapper">
           <?php
          
           if ( has_post_thumbnail() ) {
@@ -118,7 +117,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 
     
-        <figure class="woocommerce-product-gallery__wrapper product-full">
+        <figure class="woocommerce-product-gallery__wrapper">
       <?php
       if ( has_post_thumbnail() ) {
   

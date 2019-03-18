@@ -5,9 +5,6 @@ define('MAGIKCRETA_THEME_PATH', get_template_directory());
 define('MAGIKCRETA_THEME_URI', get_template_directory_uri());
 define('MAGIKCRETA_THEME_NAME', 'creta');
 
-define('MAGIKCRETA_CUS_PLUGIN_PATH', MAGIKCRETA_THEME_PATH.'/inc/plugins/');
-define('MAGIKCRETA_CUS_PLUGIN_URI', MAGIKCRETA_THEME_PATH.'/inc/plugins/');
-
 /* Include required tgm activation */
 require_once ( get_template_directory(). '/includes/tgm_activation/install-required.php');
 require_once ( get_template_directory(). '/includes/reduxActivate.php');
@@ -1100,12 +1097,63 @@ function magikCreta_breadcrumbs() {
   //add to cart function
 function magikCreta_woocommerce_product_add_to_cart_text() {
     global $product;
-     /**
-         * woocommerce_after_shop_loop_item hook
-         *
-         * @hooked woocommerce_template_loop_add_to_cart - 10
-         */
-        do_action('woocommerce_after_shop_loop_item');
+    $product_type = $product->get_type();
+    $product_id=$product->get_id();
+    if($product->is_in_stock())
+    {
+    switch ( $product_type ) {
+    case 'external':
+    ?>
+    <a class="button btn-cart" title='<?php echo esc_html($product->add_to_cart_text()); ?>'
+       onClick='window.location.assign("<?php echo esc_js(get_permalink($product_id)); ?>")'>
+    <span> <?php echo esc_html($product->add_to_cart_text()); ?></span>
+    </a>
+    <?php
+       break;
+       case 'grouped':
+        ?>
+    <a class="button btn-cart" title='<?php echo esc_html($product->add_to_cart_text()); ?>'
+       onClick='window.location.assign("<?php echo esc_js(get_permalink($product_id)); ?>")' >
+    <span><?php echo esc_html($product->add_to_cart_text()); ?> </span>
+    </a>
+    <?php
+       break;
+       case 'simple':
+        ?>
+    <?php magikCreta_simple_product_link();?>
+    <?php
+       break;
+       case 'variable':
+        ?>
+    <a class="button btn-cart"  title='<?php esc_attr_e("Select options",'creta'); ?>'
+       onClick='window.location.assign("<?php echo esc_js(get_permalink($product_id)); ?>")'>
+    <span>
+    <?php echo esc_html($product->add_to_cart_text()); ?>
+    </span> 
+    </a>
+    <?php
+       break;
+       default:
+        ?>
+    <a class="button btn-cart" title='<?php esc_attr_e("Read more",'creta'); ?>'
+       onClick='window.location.assign("<?php echo esc_js(get_permalink($product_id)); ?>")'>
+    <span><?php esc_attr_e('Read more', 'creta'); ?></span> 
+    </a>
+    <?php
+       break;
+       
+       }
+       }
+       else
+       {
+       ?>
+    <a type='button' class="button btn-cart" title='<?php esc_attr_e('Out of stock', 'creta'); ?> '
+       onClick='window.location.assign("<?php echo esc_js(get_permalink($product_id)); ?>")'
+       class='button btn-cart'>
+    <span> <?php esc_attr_e('Out of stock', 'creta'); ?> </span>
+    </a>
+    <?php
+    }
 }
  
  // comment display 

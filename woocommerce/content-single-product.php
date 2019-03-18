@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 global $creta_Options;
 ?>
 
-<div class="main-container col1-layout">
+<div class="main-container col1-layout wow bounceInUp">
     <div class="main">
 
      <?php  if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout']=='default')
@@ -42,7 +42,7 @@ global $creta_Options;
     <div class="col-main">
        
         <div class="product-view <?php  if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout']=='version2')
-                       {?> container  version2 <?php  } ?>">
+                       {?> container   wow bounceInUp <?php  } ?>">
 
                 <?php /**
  * Hook: woocommerce_before_single_product.
