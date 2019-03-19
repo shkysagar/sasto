@@ -17,8 +17,6 @@
                                             data-bgposition='left top' data-bgfit='cover'
                                             data-bgrepeat='no-repeat'
                                             alt="<?php echo esc_attr($slide['title']); ?>"/> <?php echo htmlspecialchars_decode($slide['description']); ?>
-<!--                                        <a class="s-link"-->
-<!--                                           href="--><?php //echo !empty($slide['url']) ? esc_url($slide['url']) : '#' ?><!--"></a>-->
                                     </li>
 
                                 <?php endforeach; ?>
