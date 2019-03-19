@@ -25,6 +25,13 @@ $MagikCreta = new MagikCreta(); ?>
                             <div class="welcome-msg">
                                 <?php echo magikCreta_msg(); ?>
                             </div>
+                            <?php
+                            $user = wp_get_current_user();
+
+                            if ( $user ) :
+                                ?>
+                                <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" />
+                            <?php endif; ?>
 
                         </div>
                         <div class="col-xs-6 hidden-xs">
