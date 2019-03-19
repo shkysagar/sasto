@@ -300,7 +300,6 @@ Redux::setSection($opt_name, array(
             'placeholder' => array(
                 'title' => esc_html__('This is a title', 'creta'),
                 'description' => esc_html__('Description Here', 'creta'),
-                'url' => esc_html__('Give us a link!', 'creta'),
             ),
 
         ),
@@ -751,7 +750,7 @@ Redux::setSection($opt_name, array(
             'required' => array('enable_brand_logo', '=', '1'),
             'title' => esc_html__('Company Logo Uploads', 'creta'),
             'subtitle' => esc_html__('Unlimited Logo uploads with drag and drop sortings.', 'creta'),
-            
+
         ),
 
         array(
