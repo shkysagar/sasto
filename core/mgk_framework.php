@@ -86,9 +86,9 @@ function magikCreta_backtotop()
  if (isset($creta_Options['back_to_top']) && !empty($creta_Options['back_to_top'])) {
     ?>
    <script type="text/javascript">
-    jQuery(document).ready(function($){ 
+    /*jQuery(document).ready(function($){
         jQuery().UItoTop();
-    });
+    });*/
     </script>
 <?php
 }

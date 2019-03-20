@@ -18,6 +18,8 @@ if (!function_exists('magikCreta_msg')) {
     }
 }
 
+
+
 if (!function_exists('magikCreta_logo_image')) {
     function magikCreta_logo_image()
     {
