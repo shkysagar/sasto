@@ -7024,22 +7024,41 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar .navbar-brand img {
   height: 40px; }
 
+@media (max-width: 992px) {
+  #menu-main.navbar-nav .nav-link {
+    border-bottom: 1px solid #e9ecef;
+    position: relative; }
+    #menu-main.navbar-nav .nav-link:after {
+      content: '\f054';
+      font-family: 'Font Awesome 5 Free';
+      position: absolute;
+      right: 0; } }
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 15px;
     padding-right: 15px; } }
 
-.header-user .user_avatar img {
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border: 2px solid #F7F7F7; }
+.header-user .user_avatar {
+  display: inline-block; }
+  .header-user .user_avatar img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid #F7F7F7; }
+
+@media (min-width: 992px) {
+  .header-user .user-minffo {
+    display: none; } }
 
 .header-user .dropdown-menu .user-panel {
   width: 300px;
   padding: 10px;
   border-bottom: 1px solid #e9ecef; }
+  @media (max-width: 992px) {
+    .header-user .dropdown-menu .user-panel {
+      display: none; } }
   .header-user .dropdown-menu .user-panel .avatar {
     width: 60px;
     height: 60px;

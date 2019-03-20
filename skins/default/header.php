@@ -17,14 +17,15 @@ $MagikCreta = new MagikCreta(); ?>
 
     <nav class="navbar navbar-expand-lg ">
         <?php magikCreta_logo_image(); ?>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+                aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample01">
             <?php echo magikCreta_main_menu(); ?>
 
-            <ul class="navbar-nav header-user d-flex align-items-center">
+            <ul class="navbar-nav header-user d-flex align-items-md-center">
                 <?php
                 if (class_exists('WooCommerce')) :
                     $MagikCreta->magikCreta_mini_cart();
@@ -39,15 +40,18 @@ $MagikCreta = new MagikCreta(); ?>
                                 <span class="user_avatar">
                                     <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
                                          src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
+
                                 </span>
+                            <span class="user-minffo">
+                                    <?php echo '' . esc_attr($current_user->display_name) . ''; ?>
+                                        </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
-                            <div class="user-panel d-flex align-items-center">
-                                <div>
-                                    <div class="avatar">
-                                        <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
-                                             src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
-                                    </div>
+                            <div class="user-panel d-md-flex align-items-center">
+
+                                <div class="avatar">
+                                    <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
+                                         src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
                                 </div>
                                 <div class="user-info">
                                     <strong><?php echo '' . esc_attr($current_user->display_name) . ''; ?></strong><br/>
@@ -73,7 +77,6 @@ $MagikCreta = new MagikCreta(); ?>
             </ul>
         </div>
     </nav>
-
 
 
     <?php if (class_exists('WooCommerce') && is_woocommerce()) : ?>
