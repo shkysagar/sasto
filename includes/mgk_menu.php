@@ -598,7 +598,7 @@ if (!class_exists('MagikCreta_top_navwalker')) {
 
                     $popup_style = str_replace('"', '\'', $item->popup_style . $popup_bg_image . $popup_bg_pos . $popup_bg_repeat . $popup_bg_size );
                 } else {
-                    $menu_type = " narrow";
+                    $menu_type = "nav-item";
                 }
                 $popup_pos = " ". $item->popup_pos;
             }
@@ -634,11 +634,11 @@ if (!class_exists('MagikCreta_top_navwalker')) {
             if ( ( $item->current && $depth == 0 ) ||  ( $item->current_item_ancestor && $depth == 0 ) )
                 $current_a .= ' current ';
 
-            $attributes .= ' class="'. $current_a . '"';
+            $attributes .= ' class="nav-link'. $current_a . '"';
             $item_output = $args->before;
             if ( $item->hide == "" ) {
                 if ( $item->nolink == "" ) {
-                    $item_output .= '<a'. $attributes .'><span>';
+                    $item_output .= '<a'. $attributes .'>';
                 } else{
                     $item_output .= '<h5>';
                 }
@@ -657,7 +657,7 @@ if (!class_exists('MagikCreta_top_navwalker')) {
                     $item_output .= '<span class="tip" style="'.$item_style.'"><span class="tip-arrow" style="'.$item_arrow_style.'"></span>'.$item->tip_label.'</span>';
                 }
                 if ( $item->nolink == "" ) {
-                    $item_output .= '</span></a>';
+                    $item_output .= '</a>';
                 } else {
                     $item_output .= '</h5>';
                 }

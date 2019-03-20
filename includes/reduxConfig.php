@@ -873,24 +873,7 @@ Redux::setSection($opt_name, array(
             'desc' => esc_html__('', 'creta'),
             'subtitle' => esc_html__('Upload your logo here and enter the height of it below', 'creta'),
         ),
-        array(
-            'id' => 'header_logo_height',
-            'type' => 'text',
-            'required' => array('header_use_imagelogo', '=', '1'),
-            'title' => esc_html__('Logo Height', 'creta'),
-            'subtitle' => esc_html__('Don\'t include "px" in the string. e.g. 30', 'creta'),
-            'desc' => '',
-            'validate' => 'numeric'
-        ),
-        array(
-            'id' => 'header_logo_width',
-            'type' => 'text',
-            'required' => array('header_use_imagelogo', '=', '1'),
-            'title' => esc_html__('Logo Width', 'creta'),
-            'subtitle' => esc_html__('Don\'t include "px" in the string. e.g. 30', 'creta'),
-            'desc' => '',
-            'validate' => 'numeric'
-        ),
+
 
         array(
             'id' => 'header_remove_header_search',
@@ -953,26 +936,7 @@ Redux::setSection($opt_name, array(
     'heading' => esc_html__('All Menu related options are listed here.', 'creta'),
     'desc' => esc_html__('', 'creta'),
     'fields' => array(
-        array(
-            'id' => 'show_menu_arrow',
-            'type' => 'switch',
-            'title' => esc_html__('Show Menu Arrow', 'creta'),
-            'desc' => esc_html__('Show arrow in menu.', 'creta'),
 
-        ),
-        array(
-            'id' => 'login_button_pos',
-            'type' => 'radio',
-            'title' => esc_html__('Show Login/sign and logout link', 'creta'),
-            'desc' => esc_html__('Please Select any option from above.', 'creta'),
-            //Must provide key => value pairs for radio options
-            'options' => array(
-                'none' => 'None',
-                'toplinks' => 'In Top Menu',
-                'main_menu' => 'In Main Menu'
-            ),
-            'default' => 'none'
-        )
 
     ) // fields ends here
 ));

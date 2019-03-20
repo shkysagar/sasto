@@ -19,7 +19,6 @@ if (!function_exists('magikCreta_msg')) {
 }
 
 
-
 if (!function_exists('magikCreta_logo_image')) {
     function magikCreta_logo_image()
     {
@@ -28,7 +27,7 @@ if (!function_exists('magikCreta_logo_image')) {
         $logoUrl = get_template_directory_uri() . '/images/logo.png';
 
         if (isset($creta_Options['header_use_imagelogo']) && $creta_Options['header_use_imagelogo'] == 0) { ?>
-            <a class="logo logotext logo-title" title="<?php bloginfo('name'); ?>"
+            <a class="navbar-brand" title="<?php bloginfo('name'); ?>"
                href="<?php echo esc_url(get_home_url()); ?> ">
                 <?php bloginfo('name'); ?>
             </a>
@@ -36,14 +35,12 @@ if (!function_exists('magikCreta_logo_image')) {
         } else if (isset($creta_Options['header_logo']['url']) && !empty($creta_Options['header_logo']['url'])) {
             $logoUrl = $creta_Options['header_logo']['url'];
             ?>
-            <a class="logo" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(get_home_url()); ?> "> <img
-                        alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url($logoUrl); ?>"
-                        height="<?php echo !empty($creta_Options['header_logo_height']) ? esc_html($creta_Options['header_logo_height']) : ''; ?>"
-                        width="<?php echo !empty($creta_Options['header_logo_width']) ? esc_html($creta_Options['header_logo_width']) : ''; ?>">
+            <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(get_home_url()); ?> ">
+                <img alt="<?php bloginfo('name'); ?>" src="<?php echo esc_url($logoUrl); ?>"/>
             </a>
             <?php
         } else { ?>
-            <a class="logo" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(get_home_url()); ?> ">
+            <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo esc_url(get_home_url()); ?> ">
                 <img src="<?php echo esc_url($logoUrl); ?>" alt="<?php bloginfo('name'); ?>"> </a>
         <?php }
 
@@ -264,7 +261,7 @@ if (!function_exists('magikCreta_header_service')) {
                 </div>
             </div>
 
-            <?php
+        <?php
 
         endif;
     }

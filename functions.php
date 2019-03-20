@@ -206,9 +206,9 @@ class MagikCreta
         //theme js
 
 
-//        wp_enqueue_script('bootstrap.min-js', MAGIKCRETA_THEME_URI . '/js/bootstrap.min.js', array('jquery'), '', true);
-        // wp_enqueue_script('jquery.ui.min',MAGIKCRETA_THEME_URI . '/js/jquery-ui.min.js', array('jquery'), '', true);
-//        wp_enqueue_script('jquery.cookie.min', MAGIKCRETA_THEME_URI . '/js/jquery.cookie.min.js', array('jquery'), '', true);
+        wp_enqueue_script('jquery.min', MAGIKCRETA_THEME_URI . '/src/js/jquery.min.js', array('jquery'), '', true);
+        wp_enqueue_script('popper.min', MAGIKCRETA_THEME_URI . '/src/js/popper.min.js', array('jquery'), '', true);
+        wp_enqueue_script('bootstrap.min', MAGIKCRETA_THEME_URI . '/src/js/bootstrap.min.js', array('jquery'), '', true);
 
 
         wp_enqueue_script('countdown', MAGIKCRETA_THEME_URI . '/js/countdown.js', array('jquery'), '', true);

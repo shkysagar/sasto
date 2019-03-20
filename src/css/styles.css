@@ -7019,3 +7019,32 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+.navbar .navbar-brand img {
+  height: 40px; }
+
+.header-user .user_avatar img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid #F7F7F7; }
+
+.header-user .dropdown-menu .user-panel {
+  width: 300px;
+  padding: 10px; }
+  .header-user .dropdown-menu .user-panel .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 2px solid #F7F7F7; }
+    .header-user .dropdown-menu .user-panel .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .header-user .dropdown-menu .user-panel .user-info {
+    color: #909090; }
+    .header-user .dropdown-menu .user-panel .user-info strong {
+      color: #383838; }

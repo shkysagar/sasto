@@ -12,40 +12,61 @@ $MagikCreta = new MagikCreta(); ?>
 <body <?php body_class(); ?> >
 <div id="page" class="page catalog-category-view">
 
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">CompanyName</a>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <?php magikCreta_logo_image(); ?>
+        <!--        <a class="navbar-brand" href="#">CompanyName</a>-->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+            <?php echo magikCreta_main_menu(); ?>
 
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+            <ul class="navbar-nav header-user">
+
+                <?php if (is_user_logged_in()) {
+                    global $current_user; ?>
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                                <span class="user_avatar">
+                                    <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
+                                         src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
+                                </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
+                            <div class="user-panel d-flex align-items-center">
+                                <div>
+                                    <div class="avatar">
+                                        <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
+                                             src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
+                                    </div>
+                                </div>
+                                <div class="user-info">
+                                    <strong><?php echo '' . esc_attr($current_user->display_name) . ''; ?></strong><br/>
+                                    <?php echo '' . esc_attr($current_user->user_email) . ''; ?>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item"
+                               href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="<?php echo wp_logout_url( get_permalink() ); ?>">
+                                Log Out
+                            </a>
+                        </div>
+                    </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"
+                           class="nav-link">
+                            Sign In</a>
+                    </li>
+                <?php } ?>
+
             </ul>
         </div>
     </nav>
 
 
-
+    <hr/>
 
     <!-- Header -->
     <header id="header">
@@ -73,7 +94,8 @@ $MagikCreta = new MagikCreta(); ?>
                             <div class="toplinks">
                                 <div class="links">
                                     <!-- Header Top Links -->
-                                    <?php echo magikCreta_top_navigation(); ?>
+                                    <?php //
+                                    //echo magikCreta_top_navigation(); ?>
                                     <!-- End Header Top Links -->
                                 </div>
                             </div>
