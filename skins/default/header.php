@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+    <meta name="google-site-verification" content="0cA2YUXDvcEpul2iuPhQ8bGz87WsM9Vl-WWYd69Id6E" />
+
     <?php wp_head(); ?>
 </head>
 <?php
@@ -68,8 +70,7 @@ $MagikCreta = new MagikCreta(); ?>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">
-                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"
-                           class="nav-link">
+                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="nav-link">
                             Sign In</a>
                     </li>
                 <?php } ?>
