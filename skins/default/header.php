@@ -31,18 +31,18 @@ $MagikCreta = new MagikCreta(); ?>
                     $MagikCreta->magikCreta_mini_cart();
                 endif;
                 ?>
-                <?php echo magikCreta_top_navigation(); ?>
+                <?php //echo magikCreta_top_navigation(); ?>
 
                 <?php if (is_user_logged_in()) {
                     global $current_user; ?>
-                    <li class="nav-item dropdown show">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                                 <span class="user_avatar">
-                                    <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
-                                         src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
+                                    <?php echo get_avatar( $current_user->user_email); ?>
 
                                 </span>
+
                             <span class="user-minffo">
                                     <?php echo '' . esc_attr($current_user->display_name) . ''; ?>
                                         </span>
@@ -51,8 +51,7 @@ $MagikCreta = new MagikCreta(); ?>
                             <div class="user-panel d-md-flex align-items-center">
 
                                 <div class="avatar">
-                                    <img alt="<?php echo '' . esc_attr($current_user->display_name) . ''; ?>"
-                                         src="<?php echo esc_url(get_avatar_url($user->ID)); ?>"/>
+                                    <?php echo get_avatar( $current_user->user_email); ?>
                                 </div>
                                 <div class="user-info">
                                     <strong><?php echo '' . esc_attr($current_user->display_name) . ''; ?></strong><br/>
@@ -78,7 +77,6 @@ $MagikCreta = new MagikCreta(); ?>
             </ul>
         </div>
     </nav>
-
 
     <?php if (class_exists('WooCommerce') && is_woocommerce()) : ?>
 
