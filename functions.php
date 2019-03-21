@@ -138,38 +138,7 @@ class MagikCreta
         $fonts = array();
         $subsets = 'latin,latin-ext';
 
-        if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout'] == 'version2') {
-            if ('off' !== _x('on', 'Herr: on or off', 'creta')) {
-                $fonts[] = 'Herr Von Muellerhoff';
-            }
 
-            if ('off' !== _x('on', 'Open Sans: on or off', 'creta')) {
-                $fonts[] = 'Open Sans:400,300,300italic,400italic,600,600italic,700,700italic,800';
-            }
-
-            if ('off' !== _x('on', 'Montserrat: on or off', 'creta')) {
-                $fonts[] = 'Montserrat:400,700';
-            }
-
-            if ('off' !== _x('on', 'Electrolize: on or off', 'creta')) {
-                $fonts[] = 'Electrolize';
-            }
-        } else {
-
-            if ('off' !== _x('on', 'Open Sans: on or off', 'creta')) {
-                $fonts[] = 'Open Sans:700,600,800,400';
-            }
-            if ('off' !== _x('on', 'Raleway: on or off', 'creta')) {
-                $fonts[] = 'Raleway:400,300,600,500,700,800';
-            }
-        }
-
-        if ($fonts) {
-            $fonts_url = add_query_arg(array(
-                'family' => urlencode(implode('|', $fonts)),
-                'subset' => urlencode($subsets),
-            ), 'https://fonts.googleapis.com/css');
-        }
         return $fonts_url;
     }
 
@@ -1047,6 +1016,14 @@ class MagikCreta
     }
 }
 
+// [product_count] shortcode
+function product_count_shortcode()
+{
+    $count_posts = wp_count_posts('product');
+    return $count_posts->publish;
+}
+
+add_shortcode('product_count', 'product_count_shortcode');
 // Instantiate theme
 $MagikCreta = new MagikCreta();
 

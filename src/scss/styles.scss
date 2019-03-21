@@ -110,3 +110,15 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
     font-size: 12px;
   }
 }
+
+.homepage-banner {
+  background: red;
+
+  .banner-content {
+    height: 350px;
+    h2{
+      font-family: 'proxima_nova_ltsemibold';
+      font-size: 50px;
+    }
+  }
+}

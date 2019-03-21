@@ -31,6 +31,7 @@ $MagikCreta = new MagikCreta(); ?>
                     $MagikCreta->magikCreta_mini_cart();
                 endif;
                 ?>
+                <?php echo magikCreta_top_navigation(); ?>
 
                 <?php if (is_user_logged_in()) {
                     global $current_user; ?>
