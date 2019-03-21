@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 
-    <meta name="google-site-verification" content="0cA2YUXDvcEpul2iuPhQ8bGz87WsM9Vl-WWYd69Id6E" />
+    <meta name="google-site-verification" content="0cA2YUXDvcEpul2iuPhQ8bGz87WsM9Vl-WWYd69Id6E"/>
 
     <?php wp_head(); ?>
 </head>
@@ -33,7 +32,7 @@ $MagikCreta = new MagikCreta(); ?>
                     $MagikCreta->magikCreta_mini_cart();
                 endif;
                 ?>
-                <?php //echo magikCreta_top_navigation(); ?>
+
 
                 <?php if (is_user_logged_in()) {
                     global $current_user; ?>
@@ -41,7 +40,7 @@ $MagikCreta = new MagikCreta(); ?>
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                                 <span class="user_avatar">
-                                    <?php echo get_avatar( $current_user->user_email); ?>
+                                    <?php echo get_avatar($current_user->user_email); ?>
 
                                 </span>
 
@@ -53,25 +52,20 @@ $MagikCreta = new MagikCreta(); ?>
                             <div class="user-panel d-md-flex align-items-center">
 
                                 <div class="avatar">
-                                    <?php echo get_avatar( $current_user->user_email); ?>
+                                    <?php echo get_avatar($current_user->user_email); ?>
                                 </div>
                                 <div class="user-info">
                                     <strong><?php echo '' . esc_attr($current_user->display_name) . ''; ?></strong><br/>
                                     <?php echo '' . esc_attr($current_user->user_email) . ''; ?>
                                 </div>
                             </div>
-                            <a class="dropdown-item"
-                               href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="<?php echo wp_logout_url(get_permalink()); ?>">
-                                Log Out
-                            </a>
+                            <?php echo magikCreta_top_navigation(); ?>
                         </div>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">
-                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="nav-link">
-                            Sign In</a>
+                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"
+                           class="nav-link"> Sign In</a>
                     </li>
                 <?php } ?>
 

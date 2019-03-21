@@ -7053,7 +7053,7 @@ a.text-dark:hover, a.text-dark:focus {
     display: none; } }
 
 .header-user .dropdown-menu .user-panel {
-  width: 300px;
+  width: 380px;
   padding: 10px;
   border-bottom: 1px solid #e9ecef; }
   @media (max-width: 992px) {
@@ -7090,6 +7090,16 @@ a.text-dark:hover, a.text-dark:focus {
     line-height: 15px;
     font-size: 12px; }
 
+.dropdown-menu {
+  padding: 0;
+  margin: 0; }
+
+.menu-top-container ul {
+  padding: 0;
+  list-style: none; }
+  .menu-top-container ul a i {
+    margin-right: 10px; }
+
 .homepage-banner {
   background: red; }
   .homepage-banner .banner-content {
@@ -7097,3 +7107,18 @@ a.text-dark:hover, a.text-dark:focus {
     .homepage-banner .banner-content h2 {
       font-family: 'proxima_nova_ltsemibold';
       font-size: 50px; }
+
+.mgkwooas-ajaxsearchform-container {
+  position: relative; }
+  .mgkwooas-ajaxsearchform-container:before {
+    content: '\f002';
+    font-family: "FontAwesome";
+    position: absolute;
+    font-size: 150%;
+    color: rgba(0, 0, 0, 0.3);
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%); }
+  .mgkwooas-ajaxsearchform-container input.mgkwooas-searchstr {
+    padding: 15px 15px 15px 45px !important;
+    font-size: 18px; }

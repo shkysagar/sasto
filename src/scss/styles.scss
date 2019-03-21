@@ -59,7 +59,7 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
   .dropdown-menu {
 
     .user-panel {
-      width: 300px;
+      width: 380px;
       padding: 10px;
       border-bottom: 1px solid #e9ecef;
       @media (max-width: 992px) {
@@ -111,14 +111,57 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
   }
 }
 
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-top-container {
+  ul {
+    padding: 0;
+    list-style: none;
+
+    a {
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
 .homepage-banner {
   background: red;
 
   .banner-content {
     height: 350px;
-    h2{
+
+    h2 {
       font-family: 'proxima_nova_ltsemibold';
       font-size: 50px;
     }
   }
+}
+
+
+.mgkwooas-ajaxsearchform-container {
+  position: relative;
+
+  &:before {
+    content: '\f002';
+    font-family: "FontAwesome";
+    position: absolute;
+    font-size: 150%;
+    color: rgba(0,0,0,0.3);
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+
+  input.mgkwooas-searchstr {
+    padding: 15px 15px 15px 45px !important;
+    font-size: 18px;
+
+
+  }
+
 }

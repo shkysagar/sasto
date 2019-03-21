@@ -1,5 +1,37 @@
 <?php
 
+if (!function_exists('magikCreta_top_navigation')) {
+    function magikCreta_top_navigation()
+    {
+        global $creta_Options;
+
+        $html = '';
+        ob_start();
+        if (has_nav_menu('toplinks')) :
+
+            wp_nav_menu(array(
+                'theme_location' => 'toplinks',
+                'container' => 'div',
+                'menu_class' => 'dropdown-menu"' . $mcls,
+                'before' => '',
+                'after' => '',
+                'link_before' => '',
+                'link_after' => '',
+                'fallback_cb' => false,
+                'walker' => new MagikCreta_top_navwalker
+            ));
+        endif;
+
+        $output = str_replace('&nbsp;', '', ob_get_clean());
+
+        if ($output && $html) {
+            $output = preg_replace('/<\/ul>$/', $html . '</ul>', $output, 1);
+        }
+
+        return $output;
+    }
+}
+
 
 if (!function_exists('magikCreta_main_menu')) {
     function magikCreta_main_menu()
@@ -35,7 +67,6 @@ if (!function_exists('magikCreta_main_menu')) {
         return $output;
     }
 }
-
 
 
 ?>
