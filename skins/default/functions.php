@@ -440,7 +440,8 @@ if (!function_exists('magikCreta_featured_products')) {
                                         }
                                         ?>
                                     </div>
-                                    <a class="view_more_bnt" href="<?php echo !empty($creta_Options['enable_home_featured_products']) ? esc_url($creta_Options['featured_product_url']) : '#' ?>">
+                                    <a class="view_more_bnt"
+                                       href="<?php echo !empty($creta_Options['enable_home_featured_products']) ? esc_url($creta_Options['featured_product_url']) : '#' ?>">
                                         <?php esc_attr_e('VIEW ALL ', 'creta'); ?></a>
                                 </div>
 
@@ -752,9 +753,11 @@ if (!function_exists('magikCreta_newproduct_template')) {
             <div class="item-inner">
                 <div class="item-img">
                     <div class="item-img-info">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
+                        <a href="<?php the_permalink(); ?>"
+                           title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
                             <figure class="img-responsive">
-                                <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>" src="<?php echo esc_url($imageUrl[0]); ?>">
+                                <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
+                                     src="<?php echo esc_url($imageUrl[0]); ?>">
                             </figure>
 
                         </a>
@@ -768,7 +771,8 @@ if (!function_exists('magikCreta_newproduct_template')) {
                             <ul class="add-to-links">
                                 <li>
                                     <?php if (class_exists('YITH_WCQV_Frontend')) { ?>
-                                        <a class="yith-wcqv-button link-quickview" href="#" data-product_id="<?php echo esc_html($product->get_id()); ?>">
+                                        <a class="yith-wcqv-button link-quickview" href="#"
+                                           data-product_id="<?php echo esc_html($product->get_id()); ?>">
                                             <?php esc_attr_e('Quick View', 'creta'); ?>
                                         </a>
                                     <?php } ?>
@@ -807,7 +811,8 @@ if (!function_exists('magikCreta_newproduct_template')) {
                 <div class="item-info">
                     <div class="info-inner">
                         <div class="item-title">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
+                            <a href="<?php the_permalink(); ?>"
+                               title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
                                 <?php echo htmlspecialchars_decode($post->post_title); ?>
                             </a>
                         </div>
@@ -816,7 +821,8 @@ if (!function_exists('magikCreta_newproduct_template')) {
                                 <div class="ratings">
                                     <div class="rating-box">
                                         <?php $average = $product->get_average_rating(); ?>
-                                        <div style="width:<?php echo esc_html(($average / 5) * 100); ?>%" class="rating"></div>
+                                        <div style="width:<?php echo esc_html(($average / 5) * 100); ?>%"
+                                             class="rating"></div>
                                     </div>
                                 </div>
                             </div>
@@ -849,89 +855,76 @@ if (!function_exists('magikCreta_productitem_template')) {
         global $product, $woocommerce_loop, $yith_wcwl, $post;
         $imageUrl = wc_placeholder_img_src();
         if (has_post_thumbnail())
-            $imageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'magikCreta-product-size-large');
+            $imageUrl = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-thumbnails');
 
         ?>
 
-        <div class="item">
+        <div class="col-md-4">
             <div class="item-inner">
-                <div class="item-img">
-                    <div class="item-img-info">
-                        <a href="<?php the_permalink(); ?>"
-                           title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
-                            <figure class="img-responsive">
-                                <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
-                                     src="<?php echo esc_url($imageUrl[0]); ?>">
-                            </figure>
-                        </a>
+                <a href="<?php the_permalink(); ?>"
+                   title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
+                    <figure class="img-responsive">
                         <?php if ($product->is_on_sale()) : ?>
-                            <div class="new-label new-top-right">
-                                <?php esc_attr_e('Sale', 'creta'); ?>
+                            <div class="sale-label new-top-right">
+                                Sale
                             </div>
                         <?php endif; ?>
-                        <div class="box-hover">
-                            <ul class="add-to-links">
-                                <li>
-                                    <?php if (class_exists('YITH_WCQV_Frontend')) { ?>
-                                        <a class="yith-wcqv-button link-quickview" href="#"
-                                           data-product_id="<?php echo esc_html($product->get_id()); ?>"><?php esc_attr_e('Quick View', 'creta'); ?></a>
-                                    <?php } ?>
-                                </li>
-                                <li>
-                                    <?php
-                                    if (isset($yith_wcwl) && is_object($yith_wcwl)) {
-                                        $classes = get_option('yith_wcwl_use_button') == 'yes' ? 'class="add_to_wishlist link-wishlist"' : 'class="add_to_wishlist link-wishlist"';
-                                        ?>
-                                        <a href="<?php echo esc_url(add_query_arg('add_to_wishlist', $product->get_id())) ?>"
-                                           data-product-id="<?php echo esc_html($product->get_id()); ?>"
-                                           data-product-type="<?php echo esc_html($product->get_type()); ?>" <?php echo htmlspecialchars_decode($classes); ?>
-                                        ><?php esc_attr_e('Add to Wishlist', 'creta'); ?></a>
-                                        <?php
-                                    }
-                                    ?>
-                                </li>
-                                <li>
-                                    <?php if (class_exists('YITH_Woocompare_Frontend')) {
-                                        $mgk_yith_cmp = new YITH_Woocompare_Frontend; ?>
-                                        <a href="<?php echo esc_url($mgk_yith_cmp->add_product_url($product->get_id())); ?>"
-                                           class="compare link-compare add_to_compare"
-                                           data-product_id="<?php echo esc_html($product->get_id()); ?>"
-                                        ><?php esc_attr_e('Add to Compare', 'creta');
-                                            ?></a>
-                                        <?php
-                                    }
-                                    ?>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
+                             src="<?php echo esc_url($imageUrl[0]); ?>"/>
+                    </figure>
+                </a>
+
+                <div class="box-hover d-none">
+                    <ul class="add-to-links">
+                        <li>
+                            <?php if (class_exists('YITH_WCQV_Frontend')) { ?>
+                                <a class="yith-wcqv-button link-quickview" href="#"
+                                   data-product_id="<?php echo esc_html($product->get_id()); ?>">
+                                    <?php esc_attr_e('Quick View', 'creta'); ?></a>
+                            <?php } ?>
+                        </li>
+                        <li>
+                            <?php
+                            if (isset($yith_wcwl) && is_object($yith_wcwl)) {
+                                $classes = get_option('yith_wcwl_use_button') == 'yes' ? 'class="add_to_wishlist link-wishlist"' : 'class="add_to_wishlist link-wishlist"';
+                                ?>
+                                <a href="<?php echo esc_url(add_query_arg('add_to_wishlist', $product->get_id())) ?>"
+                                   data-product-id="<?php echo esc_html($product->get_id()); ?>"
+                                   data-product-type="<?php echo esc_html($product->get_type()); ?>" <?php echo htmlspecialchars_decode($classes); ?>
+                                ><?php esc_attr_e('Add to Wishlist', 'creta'); ?></a>
+                                <?php
+                            }
+                            ?>
+                        </li>
+                        <li>
+                            <?php if (class_exists('YITH_Woocompare_Frontend')) {
+                                $mgk_yith_cmp = new YITH_Woocompare_Frontend; ?>
+                                <a href="<?php echo esc_url($mgk_yith_cmp->add_product_url($product->get_id())); ?>"
+                                   class="compare link-compare add_to_compare"
+                                   data-product_id="<?php echo esc_html($product->get_id()); ?>"
+                                ><?php esc_attr_e('Add to Compare', 'creta');
+                                    ?></a>
+                                <?php
+                            }
+                            ?>
+                        </li>
+                    </ul>
                 </div>
                 <div class="item-info">
-                    <div class="info-inner">
-                        <div class="item-title">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
-                                <?php echo htmlspecialchars_decode($post->post_title); ?>
-                            </a>
+                    <div class="item-title">
+                        <a href="<?php the_permalink(); ?>"
+                           title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
+                            <?php echo htmlspecialchars_decode($post->post_title); ?>
+                        </a>
+                    </div>
+                    <div class="item-content">
+                        <?php the_content(); ?>
+                    </div>
+                    <div class="item-price">
+                        <div class="price-box">
+                            <?php echo htmlspecialchars_decode($product->get_price_html()); ?>
                         </div>
-                        <div class="item-content">
-                            <div class="rating">
-                                <div class="ratings">
-                                    <div class="rating-box">
-                                        <?php $average = $product->get_average_rating(); ?>
-                                        <div style="width:<?php echo esc_html(($average / 5) * 100); ?>%"
-                                             class="rating"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-price">
-                                <div class="price-box">
-                                    <?php echo htmlspecialchars_decode($product->get_price_html()); ?>
-                                </div>
-                            </div>
-                            <div class="action">
-                                <?php $MagikCreta->magikCreta_woocommerce_product_add_to_cart_text(); ?>
-                            </div>
-                        </div>
+                        <?php $MagikCreta->magikCreta_woocommerce_product_add_to_cart_text(); ?>
                     </div>
                 </div>
             </div>
