@@ -10,49 +10,38 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see       https://docs.woocommerce.com/document/template-structure/
- * @author    WooThemes
- * @package   WooCommerce/Templates
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @author 		WooThemes
+ * @package 	WooCommerce/Templates
  * @version     3.0.0
  */
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
-
-global $product, $woocommerce_loop,$creta_Options;
-
 
 if ( $cross_sells ) : ?>
 
-<?php if (isset($creta_Options['enable_cross_sells_products']) && !empty($creta_Options['enable_cross_sells_products'])) { 
-  ?>
+	<div class="cross-sells">
 
-  <div class="crosssel bounceInUp animated">
-     <div class="new_title">
-       <h2><?php _e( 'You may be interested', 'woocommerce' ) ?></h2>
-     </div>
-    <div class="category-products">
-    <?php woocommerce_product_loop_start(); ?>
+		<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
 
-      <?php foreach ( $cross_sells as $cross_sell ) : ?>
-       
-        <?php
+		<?php woocommerce_product_loop_start(); ?>
 
-          $post_object = get_post( $cross_sell->get_id() );
+			<?php foreach ( $cross_sells as $cross_sell ) : ?>
 
-          setup_postdata( $GLOBALS['post'] =& $post_object );
+				<?php
+				 	$post_object = get_post( $cross_sell->get_id() );
 
-          wc_get_template_part( 'content', 'product' ); ?>
+					setup_postdata( $GLOBALS['post'] =& $post_object );
 
-      <?php endforeach; ?>
+					wc_get_template_part( 'content', 'product' ); ?>
 
-    <?php woocommerce_product_loop_end(); ?>
-    
-    </div>
-  </div>
+			<?php endforeach; ?>
 
-<?php } ?>
+		<?php woocommerce_product_loop_end(); ?>
+
+	</div>
 
 <?php endif;
 

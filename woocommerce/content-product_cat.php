@@ -10,51 +10,48 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woothemes.com/document/template-structure/
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
  * @version 2.6.1
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
-
-
 ?>
-<li <?php wc_product_cat_class( 'col-lg-4 col-md-4 col-sm-4 col-xs-6', $category ); ?> >
+<li <?php wc_product_cat_class( '', $category ); ?>>
+	<?php
+	/**
+	 * woocommerce_before_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_open - 10
+	 */
+	do_action( 'woocommerce_before_subcategory', $category );
 
-    <?php do_action('woocommerce_before_subcategory', $category); ?>
+	/**
+	 * woocommerce_before_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_subcategory_thumbnail - 10
+	 */
+	do_action( 'woocommerce_before_subcategory_title', $category );
 
-    <a href="<?php echo esc_url(get_term_link($category->slug, 'product_cat')); ?>">
+	/**
+	 * woocommerce_shop_loop_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_title - 10
+	 */
+	do_action( 'woocommerce_shop_loop_subcategory_title', $category );
 
-        <?php
-        /**
-         * woocommerce_before_subcategory_title hook
-         *
-         * @hooked woocommerce_subcategory_thumbnail - 10
-         */
-        do_action('woocommerce_before_subcategory_title', $category);
-        ?>
+	/**
+	 * woocommerce_after_subcategory_title hook.
+	 */
+	do_action( 'woocommerce_after_subcategory_title', $category );
 
-        <h3>
-            <?php
-            echo esc_attr($category->name);
-
-            if ($category->count > 0)
-                echo apply_filters('woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category);
-            ?>
-        </h3>
-
-        <?php
-        /**
-         * woocommerce_after_subcategory_title hook
-         */
-        do_action('woocommerce_after_subcategory_title', $category);
-        ?>
-
-    </a>
-
-    <?php do_action('woocommerce_after_subcategory', $category); ?>
-
+	/**
+	 * woocommerce_after_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_close - 10
+	 */
+	do_action( 'woocommerce_after_subcategory', $category ); ?>
 </li>
-

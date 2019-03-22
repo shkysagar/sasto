@@ -29,10 +29,6 @@ if ( ! $short_description ) {
 }
 
 ?>
-<div class="woocommerce-product-details__short-description short-description" class="short-description">
-	    <h2><?php esc_attr_e('Quick Overview','creta');?></h2>
-	<?php echo $short_description; // WPCS: XSS ok.
-	 ?>
+<div class="woocommerce-product-details__short-description">
+	<?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
-
-

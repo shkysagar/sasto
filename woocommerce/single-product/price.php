@@ -1,6 +1,6 @@
 <?php
 /**
- * Single Product Price, including microdata for SEO
+ * Single Product Price
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/price.php.
  *
@@ -17,15 +17,10 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly
+	exit; // Exit if accessed directly
 }
 
 global $product;
 
 ?>
-<div class="price-block">
- <div class="price-box price"><?php echo $product->get_price_html(); ?></div>
-       <?php if($product->is_in_stock()){ ?><p class="availability in-stock pull-right"><span> <?php esc_attr_e('In Stock','creta');?></span></p> <?php  }else{ ?> <p class="availability out-of-stock pull-right"><span><?php esc_attr_e('Out of Stock','creta');?></span></p><?php }  ?>  
-</div>
-
-
+<p class="price"><?php echo $product->get_price_html(); ?></p>

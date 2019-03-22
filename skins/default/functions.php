@@ -440,8 +440,8 @@ if (!function_exists('magikCreta_featured_products')) {
                                         }
                                         ?>
                                     </div>
-                                    <a class="view_more_bnt"
-                                       href="<?php echo !empty($creta_Options['enable_home_featured_products']) ? esc_url($creta_Options['featured_product_url']) : '#' ?>"><?php esc_attr_e('VIEW ALL ', 'creta'); ?></a>
+                                    <a class="view_more_bnt" href="<?php echo !empty($creta_Options['enable_home_featured_products']) ? esc_url($creta_Options['featured_product_url']) : '#' ?>">
+                                        <?php esc_attr_e('VIEW ALL ', 'creta'); ?></a>
                                 </div>
 
                                 <div class="slider-items slider-width-col4 products-grid block-content owl-carousel owl-theme">
@@ -590,8 +590,6 @@ if (!function_exists('magikCreta_new_products')) {
 
                                     <?php
                                     $catloop = 1;
-
-
                                     foreach ($creta_Options['home_newproduct_categories'] as $category) {
                                         $term = get_term_by('id', $category, 'product_cat', 'ARRAY_A');
 
@@ -666,6 +664,7 @@ if (!function_exists('magikCreta_new_products')) {
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <hr/>
                                         <?php } ?>
 
                                     </div>
@@ -753,11 +752,9 @@ if (!function_exists('magikCreta_newproduct_template')) {
             <div class="item-inner">
                 <div class="item-img">
                     <div class="item-img-info">
-                        <a href="<?php the_permalink(); ?>"
-                           title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
+                        <a href="<?php the_permalink(); ?>" title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
                             <figure class="img-responsive">
-                                <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
-                                     src="<?php echo esc_url($imageUrl[0]); ?>">
+                                <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>" src="<?php echo esc_url($imageUrl[0]); ?>">
                             </figure>
 
                         </a>
@@ -771,8 +768,9 @@ if (!function_exists('magikCreta_newproduct_template')) {
                             <ul class="add-to-links">
                                 <li>
                                     <?php if (class_exists('YITH_WCQV_Frontend')) { ?>
-                                        <a class="yith-wcqv-button link-quickview" href="#"
-                                           data-product_id="<?php echo esc_html($product->get_id()); ?>"><?php esc_attr_e('Quick View', 'creta'); ?></a>
+                                        <a class="yith-wcqv-button link-quickview" href="#" data-product_id="<?php echo esc_html($product->get_id()); ?>">
+                                            <?php esc_attr_e('Quick View', 'creta'); ?>
+                                        </a>
                                     <?php } ?>
                                 </li>
                                 <li>
@@ -808,16 +806,17 @@ if (!function_exists('magikCreta_newproduct_template')) {
                 </div>
                 <div class="item-info">
                     <div class="info-inner">
-                        <div class="item-title"><a href="<?php the_permalink(); ?>"
-                                                   title="<?php echo htmlspecialchars_decode($post->post_title); ?>"> <?php echo htmlspecialchars_decode($post->post_title); ?> </a>
+                        <div class="item-title">
+                            <a href="<?php the_permalink(); ?>" title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
+                                <?php echo htmlspecialchars_decode($post->post_title); ?>
+                            </a>
                         </div>
                         <div class="item-content">
                             <div class="rating">
                                 <div class="ratings">
                                     <div class="rating-box">
                                         <?php $average = $product->get_average_rating(); ?>
-                                        <div style="width:<?php echo esc_html(($average / 5) * 100); ?>%"
-                                             class="rating"></div>
+                                        <div style="width:<?php echo esc_html(($average / 5) * 100); ?>%" class="rating"></div>
                                     </div>
                                 </div>
                             </div>
@@ -909,8 +908,10 @@ if (!function_exists('magikCreta_productitem_template')) {
                 </div>
                 <div class="item-info">
                     <div class="info-inner">
-                        <div class="item-title"><a href="<?php the_permalink(); ?>"
-                                                   title="<?php echo htmlspecialchars_decode($post->post_title); ?>"> <?php echo htmlspecialchars_decode($post->post_title); ?> </a>
+                        <div class="item-title">
+                            <a href="<?php the_permalink(); ?>" title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
+                                <?php echo htmlspecialchars_decode($post->post_title); ?>
+                            </a>
                         </div>
                         <div class="item-content">
                             <div class="rating">

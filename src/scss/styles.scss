@@ -57,8 +57,17 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
   }
 
   .dropdown-menu {
+    &.user-panel {
+      .dropdown-item {
+        padding: 0.5rem 1rem;
 
-    .user-panel {
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .user-box {
       width: 380px;
       padding: 10px;
       border-bottom: 1px solid #e9ecef;
@@ -111,26 +120,9 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
   }
 }
 
-.dropdown-menu {
-  padding: 0;
-  margin: 0;
-}
-
-.menu-top-container {
-  ul {
-    padding: 0;
-    list-style: none;
-
-    a {
-      i {
-        margin-right: 10px;
-      }
-    }
-  }
-}
 
 .homepage-banner {
-  background: red;
+  background: #383838;
 
   .banner-content {
     height: 350px;
@@ -142,7 +134,6 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
   }
 }
 
-
 .mgkwooas-ajaxsearchform-container {
   position: relative;
 
@@ -151,7 +142,7 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
     font-family: "FontAwesome";
     position: absolute;
     font-size: 150%;
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
@@ -163,5 +154,13 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
 
 
   }
+}
 
+.new-products {
+  padding: 40px 0;
+  .nav.nav-tabs{
+    .nav-item{
+      padding: 5px 15px;
+    }
+  }
 }

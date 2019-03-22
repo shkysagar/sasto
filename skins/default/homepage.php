@@ -8,9 +8,11 @@
                 <div class="">
                     <div class="banner-content d-flex justify-content-center align-items-center">
                         <div class="">
-                            <h2 class="text-center text-white"><?php echo do_shortcode("[product_count]"); ?>+ Premium Website Templates<br/>
+                            <h2 class="text-center text-white"><?php echo do_shortcode("[product_count]"); ?>+ Premium
+                                Website Templates<br/>
                                 That Perfectly Fit Your Business</h2>
-                            <p class="text-center text-white">WordPress themes, web templates and more. Brought to you by the largest global community of creatives.</p>
+                            <p class="text-center text-white">WordPress themes, web templates and more. Brought to you
+                                by the largest global community of creatives.</p>
                             <?php echo magikCreta_search_form(); ?>
 
 
@@ -21,10 +23,99 @@
         </div>
     </div>
 </section>
+<?php if (isset($creta_Options['enable_home_new_products']) && !empty($creta_Options['enable_home_new_products']) && !empty($creta_Options['home_newproduct_categories'])) {
+    ?>
+    <section class="new-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h2 class=""> New Product.</h2>
+                        <p>Choose your perfect combo, save money by purchasing a full set of professional mockups.</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col-12">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <?php
+                            $catloop = 1;
+                            foreach ($creta_Options['home_newproduct_categories'] as $category) {
+                            $term = get_term_by('id', $category, 'product_cat', 'ARRAY_A');
+
+                            ?>
+                            <a class="nav-item <?php if ($catloop == 1) { ?> active <?php } ?>" id="nav-home-tab" data-toggle="tab" href="#nav-home-<?php echo esc_html($category) ?>" role=" tab" aria-controls="nav-home-<?php echo esc_html($category) ?>" aria-selected="true"><?php echo esc_html($term['name']); ?></a>
+                                <?php
+                                $catloop++;
+                            } ?>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <?php
+                        $contentloop = 1;
+                        foreach ($creta_Options['home_newproduct_categories'] as $catcontent) {
+                        $term = get_term_by('id', $catcontent, 'product_cat', 'ARRAY_A');
+                        ?>
+                        <div class="tab-pane fade <?php if ($contentloop == 1) { ?> show active <?php } ?> " id="nav-home-<?php echo esc_html($catcontent); ?>" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="row">
+                                <?php
+
+                                $args = array(
+                                    'post_type' => 'product',
+                                    'post_status' => 'publish',
+                                    'ignore_sticky_posts' => 1,
+                                    'posts_per_page' => 4,
+
+                                    'orderby' => 'date',
+                                    'order' => 'DESC',
+                                    'tax_query' => array(
+
+                                        array(
+                                            'taxonomy' => 'product_cat',
+                                            'field' => 'term_id',
+                                            'terms' => $catcontent
+                                        )
+                                    ),
+
+
+                                );
+
+                                $loop = new WP_Query($args);
+
+                                if ($loop->have_posts()) {
+                                    while ($loop->have_posts()) : $loop->the_post();
+                                        ?>
+                                <div class="col-md-4">
+                                    <?php echo htmlspecialchars_decode($post->post_title); ?>
+                                </div>
+
+                                <?php
+                                    endwhile;
+                                } else {
+                                    esc_html__('No products found', 'creta');
+                                }
+
+                                wp_reset_postdata();
+                                $contentloop++;
+
+                                ?>
+                            </div>
+                        </div>
+
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
+}
+?>
 <?php //magikCreta_home_page_banner(); ?>
 <?php //magikCreta_hotdeal_product(); ?>
-<?php //magikCreta_new_products();?>
+<?php magikCreta_new_products(); ?>
 <?php //magikCreta_bestseller_products(); ?>
 <?php //magikCreta_featured_products();?>
 <?php //magikCreta_recommended_products();?>
