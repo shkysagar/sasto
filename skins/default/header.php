@@ -15,7 +15,7 @@
 <?php
 $MagikCreta = new MagikCreta(); ?>
 <body <?php body_class(); ?> >
-<div id="page" class="page catalog-category-view">
+
 
     <nav class="navbar navbar-expand-lg ">
         <?php magikCreta_logo_image(); ?>
@@ -33,6 +33,11 @@ $MagikCreta = new MagikCreta(); ?>
                     $MagikCreta->magikCreta_mini_cart();
                 endif;
                 ?>
+                <li class="nav-item">
+                    <a href="<?php echo get_permalink(get_option('yith_wcwl_wishlist_page_id')); ?>" class="nav-link">
+                        <i class="tm tm-favorites"></i>
+                    </a>
+                </li>
 
 
                 <?php if (is_user_logged_in()) {
@@ -71,7 +76,7 @@ $MagikCreta = new MagikCreta(); ?>
                             <a class="dropdown-item" href="<?php echo wp_logout_url(get_permalink()); ?>">
                                 <i class="fa fa-sign-out"></i> Log Out
                             </a>
-            
+
                         </div>
                     </li>
                 <?php } else { ?>

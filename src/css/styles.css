@@ -7025,6 +7025,20 @@ a.text-dark:hover, a.text-dark:focus {
   .container {
     max-width: 1600px; } }
 
+a:hover {
+  text-decoration: none; }
+
+body {
+  position: relative; }
+  body #notification {
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    right: 10px;
+    width: 350px; }
+    body #notification .alert {
+      margin-bottom: 0; }
+
 .navbar {
   background: #fff; }
   .navbar .navbar-brand img {
@@ -7155,6 +7169,14 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 3px;
   background: #fff;
   margin-bottom: 30px; }
+  .item-inner:hover figure:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4); }
   .item-inner figure {
     position: relative;
     max-height: 260px;
@@ -7162,7 +7184,14 @@ a.text-dark:hover, a.text-dark:focus {
     .item-inner figure .sale-label {
       position: absolute;
       top: 5px;
-      left: 5px; }
+      left: 5px;
+      color: #fff; }
+    .item-inner figure .wishlist {
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+      .item-inner figure .wishlist a {
+        color: red; }
     .item-inner figure .item-catagories {
       position: absolute;
       bottom: 5px;

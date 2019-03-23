@@ -862,21 +862,34 @@ if (!function_exists('magikCreta_productitem_template')) {
 
         <div class="col-md-4">
             <div class="item-inner">
-                <a href="<?php the_permalink(); ?>"
-                   title="<?php echo htmlspecialchars_decode($post->post_title); ?>" class="product-image">
-                    <figure class="img-responsive">
-                        <?php if ($product->is_on_sale()) : ?>
-                            <div class="sale-label new-top-right">
-                                Sale
-                            </div>
-                        <?php endif; ?>
-                        <div class="item-catagories">
-                            <?php echo $get_categories(); ?>
+                <figure class="img-responsive">
+                    <?php if ($product->is_on_sale()) : ?>
+                        <div class="sale-label new-top-right">
+                            Sale
                         </div>
-                        <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
-                             src="<?php echo esc_url($imageUrl[0]); ?>"/>
-                    </figure>
-                </a>
+                    <?php endif; ?>
+                    <?php
+                    if (isset($yith_wcwl) && is_object($yith_wcwl)) {
+                        $classes = get_option('yith_wcwl_use_button') == 'yes' ? 'class="add_to_wishlist link-wishlist"' : 'class="add_to_wishlist link-wishlist"';
+                        ?>
+                        <div class="wishlist">
+                            <a href="<?php echo esc_url(add_query_arg('add_to_wishlist', $product->get_id())) ?>"
+                               data-product-id="<?php echo esc_html($product->get_id()); ?>"
+                               data-product-type="<?php echo esc_html($product->get_type()); ?>"
+                                <?php echo htmlspecialchars_decode($classes); ?> >
+                                <i class="fa fa-heart"></i>
+                            </a>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <div class="item-catagories">
+                        <!--                            --><?php //echo $get_categories();
+                        ?>
+                    </div>
+                    <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
+                         src="<?php echo esc_url($imageUrl[0]); ?>"/>
+                </figure>
 
                 <div class="box-hover d-none">
                     <ul class="add-to-links">
