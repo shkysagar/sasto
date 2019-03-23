@@ -7,7 +7,7 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
 // Bootstrap Sass Imports
 @import 'font-techmarket.css';
 @import "node_modules/bootstrap/scss/bootstrap";
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .container {
     max-width: 1600px;
   }
@@ -149,6 +149,7 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
     text-align: center;
     border: none;
     margin-bottom: 5%;
+
     a.nav-item {
       padding: 3px 10px;
       background: #DDE4E8;
@@ -207,15 +208,22 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
   border-radius: 3px;
   background: #fff;
   margin-bottom: 30px;
+
   figure {
     position: relative;
-    height: 260px;
+    max-height: 260px;
     margin-bottom: 0;
 
     .sale-label {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 5px;
+      left: 5px;
+    }
+
+    .item-catagories {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
     }
 
     img {
@@ -224,15 +232,18 @@ $font-family-sans-serif: 'proxima_nova_rgregular';
       object-fit: cover;
     }
   }
-  .item-info{
+
+  .item-info {
     padding: 30px;
-    .item-title{
+
+    .item-title {
       font-size: 22px;
       line-height: 1.3;
       font-family: 'proxima_nova_ltsemibold';
       margin-bottom: 5px;
     }
-    .item-content{
+
+    .item-content {
       font-size: 14px;
     }
   }

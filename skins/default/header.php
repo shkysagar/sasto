@@ -36,66 +36,67 @@ $MagikCreta = new MagikCreta(); ?>
 
 
                 <?php if (is_user_logged_in()) {
-                global $current_user; ?>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
+                    global $current_user; ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
                                 <span class="user_avatar">
                                     <?php echo get_avatar($current_user->user_email); ?>
                                 </span>
 
-                        <span class="user-minffo">
+                            <span class="user-minffo">
                                     <?php echo '' . esc_attr($current_user->display_name) . ''; ?>
                                         </span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right user-panel" aria-labelledby="dropdown01">
-                        <div class="user-box d-md-flex align-items-center">
-
-                            <div class="avatar">
-                                <?php echo get_avatar($current_user->user_email); ?>
-                            </div>
-                            <div class="user-info">
-                                <strong><?php echo '' . esc_attr($current_user->display_name) . ''; ?></strong><br/>
-                                <?php echo '' . esc_attr($current_user->user_email) . ''; ?>
-                            </div>
-                        </div>
-                        <?php //echo magikCreta_top_navigation(); ?>
-                        <a class="dropdown-item"
-                           href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
-                            <i class="fa fa-cog"></i> Setting</a>
-                        <a class="dropdown-item" href="<?php echo get_permalink(wc_get_endpoint_url('downloads')); ?>">
-                            <i class="fa fa-download"></i> Download</a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-archive"></i> Request Theme</a>
-                        <a class="dropdown-item" href="<?php echo wp_logout_url(get_permalink()); ?>">
-                            <i class="fa fa-sign-out"></i> Log Out
                         </a>
+                        <div class="dropdown-menu dropdown-menu-right user-panel" aria-labelledby="dropdown01">
+                            <div class="user-box d-md-flex align-items-center">
+
+                                <div class="avatar">
+                                    <?php echo get_avatar($current_user->user_email); ?>
+                                </div>
+                                <div class="user-info">
+                                    <strong><?php echo '' . esc_attr($current_user->display_name) . ''; ?></strong><br/>
+                                    <?php echo '' . esc_attr($current_user->user_email) . ''; ?>
+                                </div>
+                            </div>
+                            <?php //echo magikCreta_top_navigation(); ?>
+                            <a class="dropdown-item"
+                               href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
+                                <i class="fa fa-cog"></i> Setting</a>
+                            <a class="dropdown-item"
+                               href="<?php echo get_permalink(wc_get_endpoint_url('downloads')); ?>">
+                                <i class="fa fa-download"></i> Download</a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa fa-archive"></i> Request Theme</a>
+                            <a class="dropdown-item" href="<?php echo wp_logout_url(get_permalink()); ?>">
+                                <i class="fa fa-sign-out"></i> Log Out
+                            </a>
+            
+                        </div>
+                    </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"
+                           class="nav-link"> Sign In</a>
+                    </li>
+                <?php } ?>
+
             </ul>
         </div>
-        </li>
-    <?php } else { ?>
-        <li class="nav-item">
-            <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"
-               class="nav-link"> Sign In</a>
-        </li>
-    <?php } ?>
+    </nav>
 
-        </ul>
-</div>
-</nav>
+    <?php if (class_exists('WooCommerce') && is_woocommerce()) : ?>
 
-<?php if (class_exists('WooCommerce') && is_woocommerce()) : ?>
-
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <?php woocommerce_breadcrumb(); ?>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <?php woocommerce_breadcrumb(); ?>
+                </div>
+                <!--col-xs-12-->
             </div>
-            <!--col-xs-12-->
+            <!--row-->
         </div>
-        <!--row-->
+        <!--container-->
     </div>
-    <!--container-->
-</div>
 <?php endif; ?>

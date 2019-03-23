@@ -7021,7 +7021,7 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .container {
     max-width: 1600px; } }
 
@@ -7157,12 +7157,16 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 30px; }
   .item-inner figure {
     position: relative;
-    height: 260px;
+    max-height: 260px;
     margin-bottom: 0; }
     .item-inner figure .sale-label {
       position: absolute;
-      top: 0;
-      left: 0; }
+      top: 5px;
+      left: 5px; }
+    .item-inner figure .item-catagories {
+      position: absolute;
+      bottom: 5px;
+      left: 5px; }
     .item-inner figure img {
       width: 100%;
       height: 100%;

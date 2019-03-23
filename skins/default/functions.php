@@ -814,6 +814,7 @@ if (!function_exists('magikCreta_newproduct_template')) {
                             <a href="<?php the_permalink(); ?>"
                                title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
                                 <?php echo htmlspecialchars_decode($post->post_title); ?>
+                                <?php $product->get_categories(); ?>
                             </a>
                         </div>
                         <div class="item-content">
@@ -869,6 +870,9 @@ if (!function_exists('magikCreta_productitem_template')) {
                                 Sale
                             </div>
                         <?php endif; ?>
+                        <div class="item-catagories">
+                            <?php echo $get_categories(); ?>
+                        </div>
                         <img alt="<?php echo htmlspecialchars_decode($post->post_title); ?>"
                              src="<?php echo esc_url($imageUrl[0]); ?>"/>
                     </figure>
@@ -916,6 +920,8 @@ if (!function_exists('magikCreta_productitem_template')) {
                            title="<?php echo htmlspecialchars_decode($post->post_title); ?>">
                             <?php echo htmlspecialchars_decode($post->post_title); ?>
                         </a>
+
+
                     </div>
                     <div class="item-content">
                         <?php the_content(); ?>
