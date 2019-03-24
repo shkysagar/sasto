@@ -40,7 +40,7 @@ class MagikCreta
 
         add_action('admin_enqueue_scripts', array($this, 'magikCreta_admin_scripts_styles'));
         add_action('wp_enqueue_scripts', array($this, 'magikCreta_scripts_styles'));
-        add_action('wp_head', array($this, 'magikCreta_apple_touch_icon'));
+//        add_action('wp_head', array($this, 'magikCreta_apple_touch_icon'));
 
         add_action('widgets_init', array($this, 'magikCreta_widgets_init'));
         add_action('wp_head', array($this, 'magikCreta_front_init_js_var'), 1);
