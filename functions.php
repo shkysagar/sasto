@@ -162,7 +162,7 @@ define('MAGIKCRETA_CUS_PLUGIN_PATH', MAGIKCRETA_THEME_PATH . '/inc/plugins/');
 define('MAGIKCRETA_CUS_PLUGIN_URI', MAGIKCRETA_THEME_PATH . '/inc/plugins/');
 
 /* Include required tgm activation */
-require_once(get_template_directory() . '/includes/tgm_activation/install-required.php');
+//require_once(get_template_directory() . '/includes/tgm_activation/install-required.php');
 require_once(get_template_directory() . '/includes/reduxActivate.php');
 if (file_exists(get_template_directory() . '/includes/reduxConfig.php')) {
     require_once(get_template_directory() . '/includes/reduxConfig.php');
