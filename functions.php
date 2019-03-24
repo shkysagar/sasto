@@ -370,7 +370,7 @@ class MagikCreta
 
 
 
-        wp_register_script('themejs', MAGIKCRETA_THEME_URI . '/js/mgk_menu.js', array('jquery'), '', true);
+//        wp_register_script('themejs', MAGIKCRETA_THEME_URI . '/js/mgk_menu.js', array('jquery'), '', true);
         wp_enqueue_script('themejs');
 
         wp_localize_script('themejs', 'js_creta_vars', array(
