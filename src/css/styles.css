@@ -7039,10 +7039,30 @@ body {
     body #notification .alert {
       margin-bottom: 0; }
 
-.navbar {
+header .navbar {
   background: #fff; }
-  .navbar .navbar-brand img {
+  header .navbar .navbar-brand img {
     height: 40px; }
+  header .navbar .nav-item .nav-link {
+    text-transform: capitalize; }
+  header .navbar .nav-item.dropdown ul {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem; }
+    header .navbar .nav-item.dropdown ul li:hover {
+      background-color: #f8f9fa; }
+  header .navbar .nav-item.dropdown:hover ul {
+    display: block; }
 
 @media (max-width: 992px) {
   #menu-main.navbar-nav .nav-link {

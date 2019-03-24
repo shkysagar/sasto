@@ -16,7 +16,7 @@
 $MagikCreta = new MagikCreta(); ?>
 <body <?php body_class(); ?> >
 
-
+<header>
     <nav class="navbar navbar-expand-lg ">
         <?php magikCreta_logo_image(); ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
@@ -89,50 +89,19 @@ $MagikCreta = new MagikCreta(); ?>
             </ul>
         </div>
     </nav>
-    <hr/>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+</header>
+<?php if (class_exists('WooCommerce') && is_woocommerce()) : ?>
 
-    <?php if (class_exists('WooCommerce') && is_woocommerce()) : ?>
-
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <?php woocommerce_breadcrumb(); ?>
-                </div>
-                <!--col-xs-12-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <?php woocommerce_breadcrumb(); ?>
             </div>
-            <!--row-->
+            <!--col-xs-12-->
         </div>
-        <!--container-->
+        <!--row-->
     </div>
+    <!--container-->
+</div>
 <?php endif; ?>
