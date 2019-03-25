@@ -29,94 +29,47 @@
             <div class="col-8 offset-2">
                 <?php echo magikCreta_search_form(); ?>
             </div>
+
             <div class="col-12">
-                <?php if (isset($creta_Options['enable_home_new_products']) && !empty($creta_Options['enable_home_new_products']) && !empty($creta_Options['home_newproduct_categories'])) {
-                    ?>
-                    <nav>
-                        <div class="nav justify-content-center nav-tabs browse-by" id="nav-tab" role="tablist">
-                            Or browse by category:
-
-                            <?php
-                            $catloop = 1;
-                            foreach ($creta_Options['home_newproduct_categories'] as $category) {
-                                $term = get_term_by('id', $category, 'product_cat', 'ARRAY_A');
-
-                                ?>
-
-                                <a class="nav-item <?php if ($catloop == 1) { ?> active <?php } ?>" id="nav-home-tab"
-                                   data-toggle="tab" href="#nav-home-<?php echo esc_html($category) ?>" role=" tab"
-                                   aria-controls="nav-home-<?php echo esc_html($category) ?>" aria-selected="true">
-                                    <?php echo esc_html($term['name']); ?>
-                                </a>
-                                <?php
-                                $catloop++;
-                            } ?>
-                        </div>
-                    </nav>
-                    <div class="tab-content" id="nav-tabContent">
-
+                <nav>
+                    <div class="nav justify-content-center nav-tabs browse-by" id="nav-tab" role="tablist">
+                        Or browse by category:
                         <?php
-                        $contentloop = 1;
-                        foreach ($creta_Options['home_newproduct_categories'] as $catcontent) {
-                            $term = get_term_by('id', $catcontent, 'product_cat', 'ARRAY_A');
-                            ?>
-                            <div class="tab-pane fade <?php if ($contentloop == 1) { ?> active show<?php } ?>"
-                                 id="nav-home-<?php echo esc_html($catcontent); ?>" role="tabpanel"
-                                 aria-labelledby="nav-home-tab">
-                                <div class="row">
-                                    <?php
+                        $get_featured_cats = array(
+                            'taxonomy' => 'product_cat',
+                            'orderby' => 'count',
+                            'order' => 'DESC',
+                            'hide_empty' => '1',
+                            'include' => $cat_array
+                        );
+                        $all_categories = get_categories($get_featured_cats);
+                        $j = 1;
+                        foreach ($all_categories as $cat) {
+                            $cat_id = $cat->term_id;
+                            $cat_link = get_category_link($cat_id);
+                            { ?>
 
-                                    $args = array(
-                                        'post_type' => 'product',
-                                        'post_status' => 'publish',
-                                        'ignore_sticky_posts' => 1,
-                                        'posts_per_page' => 4,
-
-                                        'orderby' => 'date',
-                                        'order' => 'DESC',
-                                        'tax_query' => array(
-
-                                            array(
-                                                'taxonomy' => 'product_cat',
-                                                'field' => 'term_id',
-                                                'terms' => $catcontent
-                                            )
-                                        ),
-
-
-                                    );
-
-                                    $loop = new WP_Query($args);
-
-                                    if ($loop->have_posts()) {
-                                        while ($loop->have_posts()) : $loop->the_post();
-                                            magikCreta_productitem_template();
-                                        endwhile;
-                                    } else {
-                                        esc_html__('No products found', 'creta');
-                                    }
-
-                                    wp_reset_postdata();
-                                    $contentloop++;
-
-                                    ?>
-                                </div>
-                            </div>
-
-                        <?php } ?>
+                                <a href="<?php echo esc_url(get_term_link($cat)); ?>" class="nav-item  <?php echo $cat->slug; ?>">
+                                    <?php echo $cat->name; ?>
+                                </a>
+                            <?php }
+                            $j++;
+                        }
+                        // Reset Post Data
+                        wp_reset_query();
+                        ?>
                     </div>
-                    <?php
-                }
-                ?>
+                </nav>
             </div>
         </div>
     </div>
 </section>
+
+<?php magikCreta_featured_products(); ?>
 <?php //magikCreta_home_page_banner(); ?>
 <?php //magikCreta_hotdeal_product(); ?>
-<?php //magikCreta_new_products(); ?>
+<?php magikCreta_new_products(); ?>
 <?php //magikCreta_bestseller_products(); ?>
-<?php //magikCreta_featured_products(); ?>
 <?php //magikCreta_recommended_products();?>
 <?php //magikCreta_home_sub_banners ();?>
 <?php //magikCreta_home_blog_posts();?>

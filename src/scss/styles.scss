@@ -66,8 +66,9 @@ header {
           background-clip: padding-box;
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 0.25rem;
-          li{
-            &:hover{
+
+          li {
+            &:hover {
               background-color: #f8f9fa;
             }
           }
@@ -291,8 +292,10 @@ header {
     .sale-label {
       position: absolute;
       top: 5px;
-      left: 5px;
+      left: -3px;
+      padding: 3px 15px;
       color: #fff;
+      background: red;
     }
 
     .wishlist {
