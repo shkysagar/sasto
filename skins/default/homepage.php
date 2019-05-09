@@ -13,8 +13,6 @@
                                 That Perfectly Fit Your Business</h2>
                             <p class="text-center text-white">WordPress themes, web templates and more. Brought to you
                                 by the largest global community of creatives.</p>
-
-
                         </div>
                     </div>
                 </div>
@@ -68,7 +66,7 @@
 <?php magikCreta_featured_products(); ?>
 <?php //magikCreta_home_page_banner(); ?>
 <?php //magikCreta_hotdeal_product(); ?>
-<?php magikCreta_new_products(); ?>
+<?php //magikCreta_new_products(); ?>
 <?php //magikCreta_bestseller_products(); ?>
 <?php //magikCreta_recommended_products();?>
 <?php //magikCreta_home_sub_banners ();?>

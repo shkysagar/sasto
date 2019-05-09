@@ -1044,107 +1044,14 @@ class MagikCreta
 
         <li class="nav-item mini-cart">
 
-            <?php if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout'] == 'version2') {
-                ?>
-                <div class="basket"><a href="<?php echo esc_url(wc_get_cart_url()); ?>">
-                        <span> <?php echo esc_html($woocommerce->cart->cart_contents_count); ?> </span></a></div>
+            <?php if (isset($creta_Options['theme_layout'])) { ?>
+                <a class="nav-link item-counter" href="<?php echo esc_url(wc_get_cart_url()); ?>">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    <span class="item-number"> <?php echo esc_html($woocommerce->cart->cart_contents_count); ?> </span>
+                    <span><?php //echo htmlspecialchars_decode(WC()->cart->get_cart_subtotal()); ?></span>
+                </a>
 
-            <?php } else { ?>
-                <div data-hover="dropdown" class="basket dropdown-toggle">
-                    <a href="<?php echo esc_url(wc_get_cart_url()); ?>">
-                        <span class="cart_count"><?php echo esc_html($woocommerce->cart->cart_contents_count); ?> </span>
-                        <span class="price"><?php esc_attr_e('My Cart', 'creta'); ?> /
-          <?php echo htmlspecialchars_decode(WC()->cart->get_cart_subtotal()); ?></span> </a>
-                </div>
             <?php } ?>
-
-
-            <div class="top-cart-content">
-                <?php if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout'] == 'version2') {
-                    ?>
-                    <div class="block-subtitle">
-                        <div class="top-subtotal"><?php echo esc_html($woocommerce->cart->cart_contents_count); ?>  <?php esc_attr_e('items', 'creta'); ?>
-                            ,
-                            <span class="price"><?php echo htmlspecialchars_decode(WC()->cart->get_cart_subtotal()); ?></span>
-                        </div>
-                    </div>
-                    <!--top-subtotal-->
-                <?php } ?>
-
-
-                <?php if (sizeof(WC()->cart->get_cart()) > 0) : $i = 0; ?>
-                    <ul class="mini-products-list" id="cart-sidebar">
-                        <?php foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) : ?>
-                            <?php
-                            $_product = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
-                            $product_id = apply_filters('woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key);
-
-                            if ($_product && $_product->exists() && $cart_item['quantity'] > 0
-                                && apply_filters('woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key)
-                            ) :
-
-                                $product_name = apply_filters('woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key);
-                                $thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
-                                $product_price = apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key);
-                                $product_permalink = apply_filters('woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink($cart_item) : '', $cart_item, $cart_item_key);
-                                $cnt = sizeof(WC()->cart->get_cart());
-                                $rowstatus = $cnt % 2 ? 'odd' : 'even';
-                                ?>
-                                <li class="item<?php if ($cnt - 1 == $i) { ?>last<?php } ?>">
-                                    <div class="item-inner">
-                                        <a class="product-image"
-                                           href="<?php echo esc_url($product_permalink); ?>"
-                                           title="<?php echo htmlspecialchars_decode($product_name); ?>"> <?php echo str_replace(array('http:', 'https:'), '', htmlspecialchars_decode($thumbnail)); ?> </a>
-
-
-                                        <div class="product-details">
-                                            <div class="access">
-                                                <a class="btn-edit" title="<?php esc_attr_e('Edit item', 'creta'); ?>"
-                                                   href="<?php echo esc_url(wc_get_cart_url()); ?>"><i
-                                                            class="icon-pencil"></i><span
-                                                            class="hidden"><?php esc_attr_e('Edit item', 'creta'); ?></span></a>
-                                                <a href="<?php echo esc_url(wc_get_cart_remove_url($cart_item_key)); ?>"
-                                                   title="<?php esc_attr_e('Remove This Item', 'creta'); ?>" onClick=""
-                                                   class="btn-remove1"><?php esc_attr_e('Remove', 'creta'); ?></a>
-
-                                            </div>
-                                            <strong><?php echo esc_html($cart_item['quantity']); ?>
-                                            </strong> x <span
-                                                    class="price"><?php echo htmlspecialchars_decode($product_price); ?></span>
-                                            <p class="product-name"><a href="<?php echo esc_url($product_permalink); ?>"
-                                                                       title="<?php echo htmlspecialchars_decode($product_name); ?>"><?php echo htmlspecialchars_decode($product_name); ?></a>
-                                            </p>
-                                        </div>
-                                        <?php echo wc_get_formatted_cart_item_data($cart_item); ?>
-                                    </div>
-
-                                </li>
-                            <?php endif; ?>
-                            <?php $i++; endforeach; ?>
-                    </ul>
-                    <!--actions-->
-
-                    <div class="actions">
-                        <button class="btn-checkout" title="<?php esc_attr_e('Checkout', 'creta'); ?>" type="button"
-                                onClick="window.location.assign('<?php echo esc_js(wc_get_checkout_url()); ?>')">
-                            <span><?php esc_attr_e('Checkout', 'creta'); ?></span></button>
-
-                        <?php if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout'] == 'default') {
-                            ?>
-                            <a class="view-cart" type="button"
-                               onClick="window.location.assign('<?php echo esc_js(wc_get_cart_url()); ?>')">
-                                <span><?php esc_attr_e('View Cart', 'creta'); ?></span> </a>
-                        <?php } ?>
-
-                    </div>
-
-                <?php else: ?>
-                    <p class="a-center noitem">
-                        <?php esc_attr_e('Sorry, nothing in cart.', 'creta'); ?>
-                    </p>
-                <?php endif; ?>
-
-            </div>
         </li>
 
         <?php

@@ -34,8 +34,10 @@ $MagikCreta = new MagikCreta(); ?>
                 endif;
                 ?>
                 <li class="nav-item">
-                    <a href="<?php echo get_permalink(get_option('yith_wcwl_wishlist_page_id')); ?>" class="nav-link">
+
+                    <a href="<?php echo get_permalink(get_option('yith_wcwl_wishlist_page_id')); ?>" class="nav-link item-counter" >
                         <i class="tm tm-favorites"></i>
+                        <span class="item-number"><?php echo YITH_WCWL()->count_products(); ?></span>
                     </a>
                 </li>
 

@@ -198,7 +198,7 @@ header {
 
     h2 {
       font-family: 'proxima_nova_ltsemibold';
-      font-size: 50px;
+      font-size: 2rem;
     }
   }
 }
@@ -269,6 +269,7 @@ header {
   border-radius: 3px;
   background: #fff;
   margin-bottom: 30px;
+  position: relative;
 
   &:hover {
     figure {
@@ -323,6 +324,7 @@ header {
 
   .item-info {
     padding: 30px;
+    border-bottom: 1px #D9E1E7 solid;
 
     .item-title {
       font-size: 22px;
@@ -333,6 +335,14 @@ header {
 
     .item-content {
       font-size: 14px;
+    }
+  }
+  .item-price{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    .price-box{
+      padding: 10px 15px;
     }
   }
 }

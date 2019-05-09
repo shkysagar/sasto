@@ -245,7 +245,7 @@ if (!function_exists('magikCreta_simple_product_link')) {
             </a>
         <?php } else {
             ?>
-            <a class="single_add_to_cart_button add_to_cart_button  product_type_simple ajax_add_to_cart button btn-cart"
+            <a class="btn btn-primary"
                title='<?php echo esc_html($product->add_to_cart_text()); ?>' data-quantity="1"
                data-product_id="<?php echo esc_attr($product->get_id()); ?>"
                href='<?php echo esc_url($product->add_to_cart_url()); ?>'>

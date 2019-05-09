@@ -7141,7 +7141,7 @@ header .navbar {
     height: 350px; }
     .homepage-banner .banner-content h2 {
       font-family: 'proxima_nova_ltsemibold';
-      font-size: 50px; }
+      font-size: 2rem; }
 
 .searchbox_home {
   padding: 30px 0; }
@@ -7188,7 +7188,8 @@ header .navbar {
   box-shadow: 0 2px 0 #D9E1E7;
   border-radius: 3px;
   background: #fff;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
   .item-inner:hover figure:before {
     content: '';
     position: absolute;
@@ -7223,7 +7224,8 @@ header .navbar {
       height: 100%;
       object-fit: cover; }
   .item-inner .item-info {
-    padding: 30px; }
+    padding: 30px;
+    border-bottom: 1px #D9E1E7 solid; }
     .item-inner .item-info .item-title {
       font-size: 22px;
       line-height: 1.3;
@@ -7231,3 +7233,9 @@ header .navbar {
       margin-bottom: 5px; }
     .item-inner .item-info .item-content {
       font-size: 14px; }
+  .item-inner .item-price {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    .item-inner .item-price .price-box {
+      padding: 10px 15px; }

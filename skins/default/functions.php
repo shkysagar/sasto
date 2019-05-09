@@ -418,39 +418,44 @@ if (!function_exists('magikCreta_featured_products')) {
         global $creta_Options;
         if (isset($creta_Options['enable_home_featured_products']) && !empty($creta_Options['enable_home_featured_products'])) {
             ?>
-<section>
-    <div class="container">
-        <div class="row">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading text-center">
+                                <h3>Feature Product</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <?php
+                        $args = array(
+                            'post_type' => 'product',
+                            'post_status' => 'publish',
+                            'posts_per_page' => $creta_Options['featured_per_page'],
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_visibility',
+                                    'field' => 'name',
+                                    'terms' => 'featured',
+                                ),
+                            ),
+                        );
 
+                        $loop = new WP_Query($args);
+                        if ($loop->have_posts()) {
+                            while ($loop->have_posts()) : $loop->the_post();
+                                magikCreta_productitem_template();
+                            endwhile;
+                        } else {
+                            esc_attr_e('No products found', 'creta');
+                        }
 
-            <?php
-            $args = array(
-                'post_type' => 'product',
-                'post_status' => 'publish',
-                'posts_per_page' => $creta_Options['featured_per_page'],
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'product_visibility',
-                        'field' => 'name',
-                        'terms' => 'featured',
-                    ),
-                ),
-            );
-
-            $loop = new WP_Query($args);
-            if ($loop->have_posts()) {
-                while ($loop->have_posts()) : $loop->the_post();
-                    magikCreta_productitem_template();
-                endwhile;
-            } else {
-                esc_attr_e('No products found', 'creta');
-            }
-
-            wp_reset_postdata();
-            ?>
-        </div>
-    </div>
-</section>
+                        wp_reset_postdata();
+                        ?>
+                    </div>
+                </div>
+            </section>
             <?php
         }
     }
@@ -842,12 +847,11 @@ if (!function_exists('magikCreta_productitem_template')) {
                         $classes = get_option('yith_wcwl_use_button') == 'yes' ? 'class="add_to_wishlist link-wishlist"' : 'class="add_to_wishlist link-wishlist"';
                         ?>
                         <div class="wishlist">
-                            <a href="<?php echo esc_url(add_query_arg('add_to_wishlist', $product->get_id())) ?>"
-                               data-product-id="<?php echo esc_html($product->get_id()); ?>"
-                               data-product-type="<?php echo esc_html($product->get_type()); ?>"
-                                <?php echo htmlspecialchars_decode($classes); ?> >
-                                <i class="fa fa-heart"></i>
-                            </a>
+                        <a href="<?php echo esc_url(add_query_arg('add_to_wishlist', $product->get_id())) ?>"
+                           data-product-id="<?php echo esc_html($product->get_id()); ?>"
+                           data-product-type="<?php echo esc_html($product->get_type()); ?>" <?php echo htmlspecialchars_decode($classes); ?>>
+                        <i class="fa fa-heart"></i>
+                        </a>
                         </div>
                         <?php
                     }
@@ -859,42 +863,6 @@ if (!function_exists('magikCreta_productitem_template')) {
                          src="<?php echo esc_url($imageUrl[0]); ?>"/>
                 </figure>
 
-                <div class="box-hover d-none">
-                    <ul class="add-to-links">
-                        <li>
-                            <?php if (class_exists('YITH_WCQV_Frontend')) { ?>
-                                <a class="yith-wcqv-button link-quickview" href="#"
-                                   data-product_id="<?php echo esc_html($product->get_id()); ?>">
-                                    <?php esc_attr_e('Quick View', 'creta'); ?></a>
-                            <?php } ?>
-                        </li>
-                        <li>
-                            <?php
-                            if (isset($yith_wcwl) && is_object($yith_wcwl)) {
-                                $classes = get_option('yith_wcwl_use_button') == 'yes' ? 'class="add_to_wishlist link-wishlist"' : 'class="add_to_wishlist link-wishlist"';
-                                ?>
-                                <a href="<?php echo esc_url(add_query_arg('add_to_wishlist', $product->get_id())) ?>"
-                                   data-product-id="<?php echo esc_html($product->get_id()); ?>"
-                                   data-product-type="<?php echo esc_html($product->get_type()); ?>" <?php echo htmlspecialchars_decode($classes); ?>
-                                ><?php esc_attr_e('Add to Wishlist', 'creta'); ?></a>
-                                <?php
-                            }
-                            ?>
-                        </li>
-                        <li>
-                            <?php if (class_exists('YITH_Woocompare_Frontend')) {
-                                $mgk_yith_cmp = new YITH_Woocompare_Frontend; ?>
-                                <a href="<?php echo esc_url($mgk_yith_cmp->add_product_url($product->get_id())); ?>"
-                                   class="compare link-compare add_to_compare"
-                                   data-product_id="<?php echo esc_html($product->get_id()); ?>"
-                                ><?php esc_attr_e('Add to Compare', 'creta');
-                                    ?></a>
-                                <?php
-                            }
-                            ?>
-                        </li>
-                    </ul>
-                </div>
                 <div class="item-info">
                     <div class="item-title">
                         <a href="<?php the_permalink(); ?>"
@@ -907,11 +875,14 @@ if (!function_exists('magikCreta_productitem_template')) {
                     <div class="item-content">
                         <?php the_content(); ?>
                     </div>
-                    <div class="item-price">
-                        <div class="price-box">
-                            <?php echo htmlspecialchars_decode($product->get_price_html()); ?>
-                        </div>
-                        <?php $MagikCreta->magikCreta_woocommerce_product_add_to_cart_text(); ?>
+
+                </div>
+                <div class="item-price">
+                    <div class="price-box col-sm-6">
+                        <?php echo htmlspecialchars_decode($product->get_price_html()); ?>
+                    </div>
+                    <div class="col-sm-6">
+                    <?php $MagikCreta->magikCreta_woocommerce_product_add_to_cart_text(); ?>
                     </div>
                 </div>
             </div>
