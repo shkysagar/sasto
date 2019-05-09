@@ -24,11 +24,11 @@
 <section class="searchbox_home">
     <div class="container">
         <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-md-8 offset-md-2">
                 <?php echo magikCreta_search_form(); ?>
             </div>
 
-            <div class="col-12">
+            <div class="col-md-12">
                 <nav>
                     <div class="nav justify-content-center nav-tabs browse-by" id="nav-tab" role="tablist">
                         Or browse by category:
@@ -66,7 +66,7 @@
 <?php magikCreta_featured_products(); ?>
 <?php //magikCreta_home_page_banner(); ?>
 <?php //magikCreta_hotdeal_product(); ?>
-<?php //magikCreta_new_products(); ?>
+<?php magikCreta_new_products(); ?>
 <?php //magikCreta_bestseller_products(); ?>
 <?php //magikCreta_recommended_products();?>
 <?php //magikCreta_home_sub_banners ();?>
