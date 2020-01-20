@@ -1,5 +1,4 @@
 <?php
-
 get_header(); ?>
  <?php if (isset($creta_Options['theme_layout']) && $creta_Options['theme_layout']=='version2')
       {?>
